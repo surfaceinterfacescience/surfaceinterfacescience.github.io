@@ -8,6 +8,10 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+ 
+<!-- Bootstrap Icons CSS -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
 
   <style>
     body,
@@ -22,7 +26,8 @@
     body {
       font-size: 16px;
     }
-
+   
+    
     .w3-half img {
       margin-bottom: -6px;
       margin-top: 16px;
@@ -33,8 +38,18 @@
     .w3-half img:hover {
       opacity: 1
     }
-  </style>
-  <style>
+
+    /* Style for submenus */
+    .sub-menu {
+      display: none;
+      max-height: 300px; /* Adjust the height as needed */
+      overflow-y: auto;
+    }
+
+    .sub-menu.show {
+      display: block;
+    }
+
     /* Add this CSS style to control the transparency level of side menu*/
     #mySidebar {
       < !-- background-image: url('your-image-url.jpg');
@@ -54,7 +69,7 @@
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
       style="width:100%;font-size:22px">[X]</a>
     <div class="w3-container">
-      <h3 class="w3-padding-64"><b>S!S Lab</b></h3>
+      <h3 class="w3-padding-64"><b>Surface & Interface Science Laboratory</b></h3>
     </div>
     <div class="w3-bar-block">
       <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
@@ -62,18 +77,26 @@
       <a href="#Interest" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Interest</a>
       <a href="#ongoing-projects" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ongoing Projects</a>
       <a href="#Opportunities" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Opportunities</a>
-      <a href="#Techniques" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Techniques</a>
+      <a href="#Techniques" onclick="toggleSubMenu('techniquesSubMenu')"
+        class="w3-bar-item w3-button w3-hover-white">Techniques <i class="fa fa-caret-down"></i></a>
+      <div id="techniquesSubMenu" class="sub-menu">
+        <a href="#Techniques" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">-Tech. Overview</a>
+        <a href="#STM-Setup" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">-STM Setup</a>
+        <a href="#Photoemission-facility" onclick="w3_close()"
+          class="w3-bar-item w3-button w3-hover-white">-Photoemission facility</a>
+      </div>
       <a href="#Members" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Members</a>
       <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Publications</a>
       <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
-
     </div>
   </nav>
+
+
 
   <!-- Top menu on small screens -->
   <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
     <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-    <span>Surface Interface Science</span>
+    <span>S!S Lab</span>
   </header>
 
   <!-- Overlay effect when opening sidebar on small screens -->
@@ -204,16 +227,18 @@
       <hr style="width:50px;border:5px solid red" class="w3-round">
       <p>We are currently working with our</p>
       <ul>
-        <li>Home-build STM set up</li>
-        <li>Ultrahigh vacuum based ESCA facility</li>
+        <li>Home-build <a href="#STM-Setup">STM Setup</a></li>
+        <li>Ultrahigh vacuum based <a href="#Photoemission-facility">Photoemission facility</a> facility</li>
       </ul>
       <div class="w3-container w3-center">
-        <img src="research_image.jpg" alt="Research Image">
+        <img src="research_image.jpg" alt="Research Image" style="max-width: 100%; height: auto;">
       </div>
+      
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
           style="float: right; color: gray;">[Home]</a>
       </p>
     </div>
+
 
 
     <!-- Members -->
@@ -274,7 +299,115 @@
       </p>
     </div>
 
+    <!-- STM Setup -->
+    <div class="w3-container" id="STM-Setup" style="margin-top:75px">
+      <h2 class="w3-xxlarge w3-text-red"><b>STM Setup</b></h2>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <h3>Tip Making</h3>
+      <p>Chemically etched tip (metal wire) in close proximity to the graphite sample, chilling in a casual ambient
+        condition</p>
 
+        <!-- Photo grid (modal) -->
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <img src="./etched_tip.jpg" style="width:100%" onclick="onClick(this)"
+          alt="Home made chemically etched metal tip">
+      </div>
+
+      <div class="w3-half">
+        <img src="./plier_cut_tip.jpg" style="width:100%" onclick="onClick(this)"
+          alt="Home made mechanically plier cut metal tip">
+      </div>
+    </div>
+
+
+
+      <h3>Electronics Design</h3>
+      <p>Our Electronics are home brewed, step by step improved from the breadborad to PCB using KiCAD 3D model design.</p>
+      <!-- Photo grid (modal) -->
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <img src="./kicadelectronicsboard1.jpg" style="width:100%" onclick="onClick(this)"
+          alt="kicadelectronicsboard1">
+      </div>
+
+      <div class="w3-half">
+        <img src="./kicadelectronicsboard2.jpg" style="width:100%" onclick="onClick(this)"
+          alt="kicadelectronicsboard2">
+      </div>
+    </div>
+
+
+      <p>Below are a set of 3D views showcasing an electronics board in action, navigating atom locations. We utilized the
+        MCP4922 12-bit digital-to-analog converter and the MCP3208 8-channel analog-to-digital converter, along with a bunch
+        of instrumentation ICs, to set up our lateral scanner electronics. </p>
+      <p> Breadboard DAC designed for our scanner, all under the control of a Raspberry Pi. </p>
+      <p>Upgraded PCB for the DAC, and universal board designed for a pre-amp (10^8 V/A) and PID circuit, powered by 2x 12 V
+        batteries.</p>
+      <p> ADC with custom attenuation and bipolar to unipolar conversion unit </p>
+      <p>PID and pre-amp (of course not ideal, but does basic work)</p>
+
+  <!-- Photo grid (modal) -->
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <img src="./preamp.jpg" style="width:100%" onclick="onClick(this)"
+          alt="preamp">
+      </div>
+
+      <div class="w3-half">
+        <img src="./pidcontroller.jpg" style="width:100%" onclick="onClick(this)"
+          alt="pidcontroller">
+      </div>
+    </div>
+      
+
+
+
+      <h3>Data Collection</h3>
+      <p>More than 15 modules in sync and counting up, for counting atoms! </p>
+
+    <!-- Photo grid (modal) -->
+    <div class="w3-row-padding">
+      <div class="w3-half">
+        <img src="./liveplot1.jpg" style="width:100%" onclick="onClick(this)"
+          alt="liveplot1">
+      </div>
+
+      <div class="w3-half">
+        <img src="./liveplot2.jpg" style="width:100%" onclick="onClick(this)"
+          alt="liveplot2">
+      </div>
+    </div>
+      
+
+      <h3>Hardware Parts</h3>
+      <p>We are currently employing a stepper motor with a worm gear setup for coarse and fine approach adjustments.</p>
+      
+    
+      
+      <p> <i class="fa fa-spinner"></i> Our scanning mechanism currently utilizes a piezoelectric buzzer plate, typically used for speaker purposes. This choice is budget-friendly and provides ample room for elaborate testing. </p>
+
+
+      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
+        style="float: right; color: gray;">[Home]</a>
+    </p>
+    </div>
+
+    <!-- Photoemission facility -->
+    <div class="w3-container" id="Photoemission-facility" style="margin-top:75px">
+      <h2 class="w3-xxlarge w3-text-red"><b>Photoemission facility</b></h2>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <h3>Equipment details</h3>
+      <p>Details about equipment...</p>
+      <h3>Characterization methods</h3>
+      <p>Details about characterization methods...</p>
+      <h3>Evaporation facility</h3>
+      <p>Details about evaporation facility...</p>
+
+      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
+        style="float: right; color: gray;">[Home]</a>
+    </p>
+    </div>
 
     <!-- Contact -->
     <div class="w3-container" id="contact" style="margin-top:75px">
@@ -289,10 +422,8 @@
           href="https://maps.app.goo.gl/3iTz91sFUsXnrvSe9" target="_blank">Google Map</a></p>
       <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i> Assistant Professor</p>
       <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i> IIT Bombay</p>
-
       <p><i class="fa fa-cogs fa-fw w3-margin-right w3-large w3-text-teal"></i> <a
           href="https://manirajmahalingam.github.io/" target="_blank">My Profile</a></p>
-
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
           style="float: right; color: gray;">[Home]</a>
       </p>
@@ -328,8 +459,32 @@
       var captionText = document.getElementById("caption");
       captionText.innerHTML = element.alt;
     }
-  </script>
 
+    // Function to toggle submenu visibility
+    function toggleSubMenu(subMenuId) {
+      var subMenu = document.getElementById(subMenuId);
+      if (subMenu.style.display === "block") {
+        subMenu.style.display = "none";
+      } else {
+        subMenu.style.display = "block";
+      }
+    }
+
+  
+      // Function to toggle submenu visibility
+      function toggleSubMenu(subMenuId) {
+        var subMenu = document.getElementById(subMenuId);
+        if (subMenu.style.display === "block") {
+          subMenu.style.display = "none";
+        } else {
+          subMenu.style.display = "block";
+          // Scroll to the bottom of the submenu
+          subMenu.scrollIntoView(false);
+        }
+      }
+  
+    
+  </script>
 </body>
 
 </html>
