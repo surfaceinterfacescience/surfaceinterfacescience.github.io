@@ -69,7 +69,7 @@
     <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
       style="width:100%;font-size:22px">(&times;)</a>
     <div class="w3-container">
-      <h3 class="w3-padding-64"><b>Surface & Interface Science Laboratory</b></h3>
+      <h3 class="w3-padding-30"><b>Surface & Interface Science Laboratory</b></h3>
     </div>
     <div class="w3-bar-block">
       <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
@@ -228,7 +228,7 @@
       <p>We are currently working with our</p>
       <ul>
         <li>Home-build <a href="#STM-Setup">STM Setup</a></li>
-        <li>Ultrahigh vacuum based <a href="#Photoemission-facility">Photoemission facility</a> facility</li>
+        <li>Ultrahigh vacuum based <a href="#Photoemission-facility">Photoemission </a> facility</li>
       </ul>
       <div class="w3-container w3-center">
         <img src="research_image.jpg" alt="Research Image" style="max-width: 100%; height: auto;">
@@ -308,15 +308,17 @@
         condition</p>
 
         <!-- Photo grid (modal) -->
-    <div class="w3-row-padding">
-      <div class="w3-half">
-        <img src="./etched_tip.jpg" style="width:100%" onclick="onClick(this)"
-          alt="Home made chemically etched metal tip">
-      </div>
+        <div class="w3-row-padding" >
+          <div class="w3-half">
+            <img src="./stm_etched_tip.jpg" style="width:100%" onclick="onClick(this)"
+              alt="Home made chemically etched metal tip"
+              class="w3-hover-grayscale">
+          </div>
 
       <div class="w3-half">
-        <img src="./plier_cut_tip.jpg" style="width:100%" onclick="onClick(this)"
-          alt="Home made mechanically plier cut metal tip">
+        <img src="./stm_tip_holder.jpg" style="width:96.5%" onclick="onClick(this)"
+          alt="Home made tip holder"
+          class="w3-hover-grayscale">
       </div>
     </div>
 
@@ -327,13 +329,13 @@
       <!-- Photo grid (modal) -->
     <div class="w3-row-padding">
       <div class="w3-half">
-        <img src="./kicadelectronicsboard1.jpg" style="width:100%" onclick="onClick(this)"
-          alt="kicadelectronicsboard1">
+        <img src="./stm_kicad_dac.png" style="width:100%" onclick="onClick(this)"
+          alt="Digital to Analog Converter">
       </div>
 
       <div class="w3-half">
-        <img src="./kicadelectronicsboard2.jpg" style="width:100%" onclick="onClick(this)"
-          alt="kicadelectronicsboard2">
+        <img src="./stm_kicad_4A4B_board.png" style="width:100%" onclick="onClick(this)"
+          alt="Analog to Digital Converter">
       </div>
     </div>
 
@@ -350,13 +352,14 @@
   <!-- Photo grid (modal) -->
     <div class="w3-row-padding">
       <div class="w3-half">
-        <img src="./preamp.jpg" style="width:100%" onclick="onClick(this)"
-          alt="preamp">
+        <img src="./stm_preamp.jpg" style="width:100%" 
+        onclick="onClick(this)"
+          alt="preamp & PID controller">
       </div>
 
       <div class="w3-half">
-        <img src="./pidcontroller.jpg" style="width:100%" onclick="onClick(this)"
-          alt="pidcontroller">
+        <img src="./stm_DAC_Raspberry_pi.jpg" style="width:100%" onclick="onClick(this)"
+          alt="DAC & Raspberry pi">
       </div>
     </div>
       
@@ -364,7 +367,7 @@
 
 
       <h3>Data Collection</h3>
-      <p>More than 15 modules in sync and counting up, for counting atoms! </p>
+      <p>More than 15 Python modules are in sync and counting up, for counting atoms! </p>
 
     <!-- Photo grid (modal) -->
     <div class="w3-row-padding">
@@ -385,7 +388,16 @@
       
     
       
-      <p> <i class="fa fa-spinner"></i> Our scanning mechanism currently utilizes a piezoelectric buzzer plate, typically used for speaker purposes. This choice is budget-friendly and provides ample room for elaborate testing. </p>
+      <p> <i class="fa fa-spinner"></i> Our scanning mechanism currently utilizes a piezoelectric 
+        <div class="w3-dropdown-hover"> buzzer
+          <div class="w3-dropdown-content w3-card-4" style="width:250px">
+            <img src="./stm_piezo_plate.jpg" alt="buzzer plate" style="width:100%">
+            <div class="w3-container">
+              <p>budget-friendly piezoelectric plate that works fair enough to see atoms, as tested by many DIY hobbyist</p>
+            </div>
+          </div>
+        </div>
+        plate, typically used for speaker purposes. This choice is budget-friendly and provides ample room for elaborate testing. </p>
 
 
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
