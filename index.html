@@ -8,9 +8,9 @@
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
- 
-<!-- Bootstrap Icons CSS -->
-<link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+
+  <!-- Bootstrap Icons CSS -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
 
 
   <style>
@@ -26,8 +26,8 @@
     body {
       font-size: 16px;
     }
-   
-    
+
+
     .w3-half img {
       margin-bottom: -6px;
       margin-top: 16px;
@@ -42,7 +42,8 @@
     /* Style for submenus */
     .sub-menu {
       display: none;
-      max-height: 300px; /* Adjust the height as needed */
+      max-height: 300px;
+      /* Adjust the height as needed */
       overflow-y: auto;
     }
 
@@ -233,7 +234,7 @@
       <div class="w3-container w3-center">
         <img src="research_image.jpg" alt="Research Image" style="max-width: 100%; height: auto;">
       </div>
-      
+
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
           style="float: right; color: gray;">[Home]</a>
       </p>
@@ -307,102 +308,100 @@
       <p>Chemically etched tip (metal wire) in close proximity to the graphite sample, chilling in a casual ambient
         condition</p>
 
-        <!-- Photo grid (modal) -->
-        <div class="w3-row-padding" >
-          <div class="w3-half">
-            <img src="./stm_etched_tip.jpg" style="width:100%" onclick="onClick(this)"
-              alt="Home made chemically etched metal tip"
-              class="w3-hover-grayscale">
-          </div>
+      <!-- Photo grid (modal) -->
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <img src="./stm_etched_tip.jpg" style="width:100%" onclick="onClick(this)"
+            alt="Home made chemically etched metal tip" class="w3-hover-grayscale">
+        </div>
 
-      <div class="w3-half">
-        <img src="./stm_tip_holder.jpg" style="width:96.5%" onclick="onClick(this)"
-          alt="Home made tip holder"
-          class="w3-hover-grayscale">
+        <div class="w3-half">
+          <img src="./stm_tip_holder.jpg" style="width:96.5%" onclick="onClick(this)" alt="Home made tip holder"
+            class="w3-hover-grayscale">
+        </div>
       </div>
-    </div>
 
 
 
       <h3>Electronics Design</h3>
-      <p>Our Electronics are home brewed, step by step improved from the breadborad to PCB using KiCAD 3D model design.</p>
+      <p>Our Electronics are home brewed, step by step improved from the breadborad to PCB using KiCAD 3D model design.
+      </p>
       <!-- Photo grid (modal) -->
-    <div class="w3-row-padding">
-      <div class="w3-half">
-        <img src="./stm_kicad_dac.png" style="width:100%" onclick="onClick(this)"
-          alt="Digital to Analog Converter">
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <img src="./stm_kicad_dac.png" style="width:100%" onclick="onClick(this)" alt="Digital to Analog Converter">
+        </div>
+
+        <div class="w3-half">
+          <img src="./stm_kicad_4A4B_board.png" style="width:100%" onclick="onClick(this)"
+            alt="Analog to Digital Converter">
+        </div>
       </div>
 
-      <div class="w3-half">
-        <img src="./stm_kicad_4A4B_board.png" style="width:100%" onclick="onClick(this)"
-          alt="Analog to Digital Converter">
-      </div>
-    </div>
 
-
-      <p>Below are a set of 3D views showcasing an electronics board in action, navigating atom locations. We utilized the
-        MCP4922 12-bit digital-to-analog converter and the MCP3208 8-channel analog-to-digital converter, along with a bunch
+      <p>Below are a set of 3D views showcasing an electronics board in action, navigating atom locations. We utilized
+        the
+        MCP4922 12-bit digital-to-analog converter and the MCP3208 8-channel analog-to-digital converter, along with a
+        bunch
         of instrumentation ICs, to set up our lateral scanner electronics. </p>
       <p> Breadboard DAC designed for our scanner, all under the control of a Raspberry Pi. </p>
-      <p>Upgraded PCB for the DAC, and universal board designed for a pre-amp (10^8 V/A) and PID circuit, powered by 2x 12 V
+      <p>Upgraded PCB for the DAC, and universal board designed for a pre-amp (10^8 V/A) and PID circuit, powered by 2x
+        12 V
         batteries.</p>
       <p> ADC with custom attenuation and bipolar to unipolar conversion unit </p>
       <p>PID and pre-amp (of course not ideal, but does basic work)</p>
 
-  <!-- Photo grid (modal) -->
-    <div class="w3-row-padding">
-      <div class="w3-half">
-        <img src="./stm_preamp.jpg" style="width:100%" 
-        onclick="onClick(this)"
-          alt="preamp & PID controller">
+      <!-- Photo grid (modal) -->
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <img src="./stm_preamp.jpg" style="width:100%" onclick="onClick(this)" alt="preamp & PID controller">
+        </div>
+
+        <div class="w3-half">
+          <img src="./stm_DAC_Raspberry_pi.jpg" style="width:100%" onclick="onClick(this)" alt="DAC & Raspberry pi">
+        </div>
       </div>
 
-      <div class="w3-half">
-        <img src="./stm_DAC_Raspberry_pi.jpg" style="width:100%" onclick="onClick(this)"
-          alt="DAC & Raspberry pi">
-      </div>
-    </div>
-      
 
 
 
       <h3>Data Collection</h3>
       <p>More than 15 Python modules are in sync and counting up, for counting atoms! </p>
 
-    <!-- Photo grid (modal) -->
-    <div class="w3-row-padding">
-      <div class="w3-half">
-        <img src="./liveplot1.jpg" style="width:100%" onclick="onClick(this)"
-          alt="liveplot1">
+      <!-- Photo grid (modal) -->
+      <div class="w3-row-padding">
+        <div class="w3-half">
+          <img src="./stm_liveplot_best.jpg" style="width:100%" onclick="onClick(this)" alt="live plot">
+        </div>
+
+        <div class="w3-half">
+          <img src="./liveplot2.jpg" style="width:100%" onclick="onClick(this)" alt="liveplot2">
+        </div>
       </div>
 
-      <div class="w3-half">
-        <img src="./liveplot2.jpg" style="width:100%" onclick="onClick(this)"
-          alt="liveplot2">
-      </div>
-    </div>
-      
 
       <h3>Hardware Parts</h3>
       <p>We are currently employing a stepper motor with a worm gear setup for coarse and fine approach adjustments.</p>
-      
-    
-      
-      <p> <i class="fa fa-spinner"></i> Our scanning mechanism currently utilizes a piezoelectric 
-        <div class="w3-dropdown-hover"> buzzer
-          <div class="w3-dropdown-content w3-card-4" style="width:250px">
-            <img src="./stm_piezo_plate.jpg" alt="buzzer plate" style="width:100%">
-            <div class="w3-container">
-              <p>budget-friendly piezoelectric plate that works fair enough to see atoms, as tested by many DIY hobbyist</p>
-            </div>
+
+
+
+      <p> <i class="fa fa-spinner"></i> Our scanning mechanism currently utilizes a piezoelectric
+      <div class="w3-dropdown-hover"> buzzer
+        <div class="w3-dropdown-content w3-card-4" style="width:250px">
+          <img src="./stm_piezo_plate.jpg" alt="buzzer plate" style="width:100%">
+          <div class="w3-container">
+            <p>budget-friendly piezoelectric plate that works fair enough to see atoms, as tested by many DIY hobbyist
+            </p>
           </div>
         </div>
-        plate, typically used for speaker purposes. This choice is budget-friendly and provides ample room for elaborate testing. </p>
+      </div>
+      plate, typically used for speaker purposes. This choice is budget-friendly and provides ample room for elaborate
+      testing. </p>
 
 
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-        style="float: right; color: gray;">[Home]</a>
-    </p>
+          style="float: right; color: gray;">[Home]</a>
+      </p>
     </div>
 
     <!-- Photoemission facility -->
@@ -417,8 +416,8 @@
       <p>Details about evaporation facility...</p>
 
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-        style="float: right; color: gray;">[Home]</a>
-    </p>
+          style="float: right; color: gray;">[Home]</a>
+      </p>
     </div>
 
     <!-- Contact -->
@@ -446,10 +445,11 @@
 
   </div>
 
-    <!-- W3.CSS Container -->
+  <!-- W3.CSS Container -->
   <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:175px;padding-right:90px">
-    <p class="w3-right"> <strong>You didn't come this far to only come this far !</strong><br> <br> Powered by w3.css</p>
-</div>
+    <p class="w3-right"> <strong>You didn't come this far to only come this far !</strong><br> <br> Powered by w3.css
+    </p>
+  </div>
 
   <script>
     // Script to open and close sidebar
@@ -481,20 +481,20 @@
       }
     }
 
-  
-      // Function to toggle submenu visibility
-      function toggleSubMenu(subMenuId) {
-        var subMenu = document.getElementById(subMenuId);
-        if (subMenu.style.display === "block") {
-          subMenu.style.display = "none";
-        } else {
-          subMenu.style.display = "block";
-          // Scroll to the bottom of the submenu
-          subMenu.scrollIntoView(false);
-        }
+
+    // Function to toggle submenu visibility
+    function toggleSubMenu(subMenuId) {
+      var subMenu = document.getElementById(subMenuId);
+      if (subMenu.style.display === "block") {
+        subMenu.style.display = "none";
+      } else {
+        subMenu.style.display = "block";
+        // Scroll to the bottom of the submenu
+        subMenu.scrollIntoView(false);
       }
-  
-    
+    }
+
+
   </script>
 </body>
 
