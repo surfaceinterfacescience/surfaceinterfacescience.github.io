@@ -60,7 +60,7 @@
       /* 80% black with 0.8 opacity */
     }
 
-    @keyframes typing {
+    < !-- cooming soon curson effect -->@keyframes typing {
       from {
         width: 0
       }
@@ -77,6 +77,24 @@
       overflow: hidden;
       border-right: .15em solid;
     }
+
+    < !-- cooming soon curson effect -->< !-- style for drop-down cv -->.cv-section {
+      margin-bottom: 20px;
+    }
+
+    .cv-section h3 {
+      font-size: 20px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 10px;
+    }
+
+    .cv-section p {
+      font-size: 14px;
+      color: #666;
+    }
+
+    < !-- end style for drop-down cv -->
   </style>
 </head>
 
@@ -278,6 +296,18 @@
             <h3>Prof. Dr. Maniraj Mahalingam</h3>
             <p class="w3-opacity">Assistant Professor</p>
             <p>Group leader and active team player.</p>
+            <!-- short cv -->
+            <div class="w3-dropdown-hover"> Quick CV
+              <div class="w3-dropdown-content w3-card-4" style="width:250px">
+                <div class="w3-container">
+                  <div class="cv-section">
+                    <p>PhD(2007-2014) UGC-DAE CSR, Indore, India</p>
+                    <p>PDF(2014-2019) University of Kaiserslautern, Kaiserslautern, Germany</p>
+                    <p>PDF(2019-2021) Martin Luther University, Halle, Germany</p>
+                  </div>
+                </div>
+              </div>
+            </div> <!-- short cv -->
           </div>
         </div>
       </div>
@@ -306,7 +336,7 @@
         <div class="w3-light-grey">
           <img src="/saikatphoto.jpg" alt="saikat" style="width:100%">
           <div class="w3-container">
-            <h3>Mr. Saikat GhoahH <br> </h3>
+            <h3>Mr. Saikat Ghoah <br> </h3>
             <p class="w3-opacity">Summer Intern 2024</p>
             <p>M.Sc. from IIT Bombay 2024.</p>
           </div>
@@ -434,7 +464,7 @@
 
 
         <p> <i class="fa fa-spinner"></i> Our scanning mechanism currently utilizes a piezoelectric
-        <div class="w3-dropdown-hover"> buzzer
+        <div class="w3-dropdown-hover"> buzzer plate,
           <div class="w3-dropdown-content w3-card-4" style="width:250px">
             <img src="./stm_piezo_plate.jpg" alt="buzzer plate" style="width:100%">
             <div class="w3-container">
@@ -443,7 +473,7 @@
             </div>
           </div>
         </div>
-        plate, typically used for speaker purposes. This choice is budget-friendly and provides ample room for elaborate
+        typically used for speaker purposes. This choice is budget-friendly and provides ample room for elaborate
         testing. </p>
       </div>
 
@@ -503,7 +533,9 @@
 
 
         <p>Prof. Jan Minar from the University of West Bohemia, Czech Republic, and our group from IIT Bombay will
-          jointly conduct a hands-on workshop on KKR code usage in IIT Bombay. The exact date will be updated soon in
+          jointly conduct a hands-on workshop on <a
+            href="https://www.ebert.cup.uni-muenchen.de/old/index.php?option=com_content&view=article&id=8%3Asprkkr&catid=4%3Asoftware&Itemid=7&lang=en">SPR-KKR</a>
+          code usage in IIT Bombay. The exact date will be updated soon in
           the
           <a href="https://surfaceinterfacescience.github.io/sprkkr-workshop/">website</a>, tentatively it is in the
           month of August-September 2024. Please save the <a
@@ -540,11 +572,7 @@
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
           style="float: right; color: gray;">[Home]</a>
       </p>
-
     </div>
-
-
-
   </div>
 
   <!-- W3.CSS Container -->
