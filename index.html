@@ -59,6 +59,24 @@
       background-color: rgba(235, 231, 231, 0.8);
       /* 80% black with 0.8 opacity */
     }
+
+    @keyframes typing {
+      from {
+        width: 0
+      }
+
+      to {
+        width: 25%
+      }
+    }
+
+    #coming-soon {
+      display: inline-block;
+      animation: typing 2s steps(100) infinite;
+      white-space: nowrap;
+      overflow: hidden;
+      border-right: .15em solid;
+    }
   </style>
 </head>
 
@@ -88,6 +106,7 @@
       </div>
       <a href="#Members" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Members</a>
       <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Publications</a>
+      <a href="#event" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Event</a>
       <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
     </div>
   </nav>
@@ -305,9 +324,13 @@
       <h2 class="w3-xxlarge w3-text-red"><b>STM Setup</b></h2>
       <hr style="width:50px;border:5px solid red" class="w3-round">
 
+      <p>Scanning Tunneling Microscopy is used to investigate surface morphology and atomic structure with
+        angstrom-range accuracy and picometer-range precision in optimal cases.</p>
 
-      <div class="w3-container" style="margin-top:75px">
-        <h3>Tip Making</h3>
+
+
+      <div class="w3-container" style="margin-top:50px">
+        <h3><strong>Tip Making</strong></h3>
         <p>Chemically etched tip (metal wire) in close proximity to the graphite sample, chilling in a casual ambient
           condition</p>
 
@@ -327,10 +350,19 @@
 
 
       <div class="w3-container" style="margin-top:75px">
-        <h3>Electronics Design</h3>
+        <h3><strong>Electronics Design</strong></h3>
         <p>Our Electronics are home brewed, step by step improved from the breadborad to PCB using KiCAD 3D model
           design.
         </p>
+
+
+
+        <p>Below are a set of 3D views showcasing an electronics board in action, navigating atom locations. We utilized
+          the
+          MCP4922 12-bit digital-to-analog converter and the MCP3208 8-channel analog-to-digital converter, along with a
+          bunch
+          of instrumentation ICs, to set up our lateral scanner electronics. </p>
+
         <!-- Photo grid (modal) -->
         <div class="w3-row-padding">
           <div class="w3-half">
@@ -343,12 +375,6 @@
           </div>
         </div>
 
-
-        <p>Below are a set of 3D views showcasing an electronics board in action, navigating atom locations. We utilized
-          the
-          MCP4922 12-bit digital-to-analog converter and the MCP3208 8-channel analog-to-digital converter, along with a
-          bunch
-          of instrumentation ICs, to set up our lateral scanner electronics. </p>
         <p> Breadboard DAC designed for our scanner, all under the control of a Raspberry Pi. </p>
         <p>Upgraded PCB for the DAC, and universal board designed for a pre-amp (10^8 V/A) and PID circuit, powered by
           2x
@@ -371,7 +397,7 @@
 
 
       <div class="w3-container" style="margin-top:75px">
-        <h3>Data Collection</h3>
+        <h3><strong>Data Collection</strong></h3>
         <p>More than 15 Python modules are in sync and counting up, for counting atoms! </p>
 
         <!-- Photo grid (modal) -->
@@ -385,8 +411,12 @@
           </div>
         </div>
       </div>
+
+
+
+
       <div class="w3-container" style="margin-top:75px">
-        <h3>Hardware Parts</h3>
+        <h3><strong>Hardware Parts</strong></h3>
         <p>We are currently employing a stepper motor with a worm gear setup for coarse and fine approach adjustments.
         </p>
 
@@ -417,26 +447,61 @@
       <hr style="width:50px;border:5px solid red" class="w3-round">
 
       <div class="w3-container" style="margin-top:65px">
-        <h3>Equipment details</h3>
-        <p>Details about equipment...</p>
+        <h3><strong>Equipment details</strong></h3>
+        <p>The instrument consists of both monochromatized and non-monochromatized X-ray light, and ultraviolet light
+          sources. It also includes a hemispherical electron energy analyzer for photoemission spectroscopy studies.</p>
+        <p>For surface preparation, we have Ar gas sputtering, annealing (heating), and scraping facilities.</p>
+
       </div>
 
       <div class="w3-container" style="margin-top:65px">
-        <h3>Characterization methods</h3>
-        <p>Details about characterization methods...</p>
+        <h3><strong>Characterization methods</strong></h3>
+        <ul>
+          <li>X-ray photoemission spectroscopy</li>
+          <li>Ultraviolet photoemission spectroscopy</li>
+          <li>Inverse photoemission spectroscopy (design and actions are under plan/progress)</li>
+        </ul>
+
       </div>
 
 
       <div class="w3-container" style="margin-top:65px">
-        <h3>Evaporation facility</h3>
-        <p>Details about evaporation facility...</p>
+        <h3><strong>Evaporation Facility</strong></h3>
+        <p>We are currently in the process of developing our own thermal evaporator suitable for:</p>
+        <ul>
+          <li>Inorganic elemental metals</li>
+          <li>Organic molecules</li>
+        </ul>
+        <p>If you are interested in joining us in building them, feel free to <a href="#contact">contact</a> us.</p>
       </div>
+
 
 
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
           style="float: right; color: gray;">[Home]</a>
       </p>
     </div>
+    <!-- Event -->
+    <div class="w3-container" id="event" style="margin-top:75px">
+      <h1 class="w3-xxxlarge w3-text-red"><b>Events</b></h1>
+      <hr style="width:50px;border:5px solid red" class="w3-round">
+      <div class="w3-container" style="margin-top:65px">
+        <h3>
+          <li>SPR-KRR workshop <span id="coming-soon" style="color:red;">cooming soon!</span></li>
+        </h3>
+        <p>Prof. Jan Minar from the University of West Bohemia, Czech Republic, and our group from IIT Bombay will
+          jointly conduct a hands-on workshop on KKR code usage in IIT Bombay. The exact date will be updated soon,
+          tentatively it is in the month of August-September 2024. Please save the workshop website page for further
+          updates. If you are interested in participating as a participant, feel free to <a href="#contact">contact</a>
+          me.</p>
+
+
+      </div>
+      <!-- <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
+      style="float: right; color: gray;">[Home]</a>
+  </p> -->
+    </div>
+
 
     <!-- Contact -->
     <div class="w3-container" id="contact" style="margin-top:75px">
