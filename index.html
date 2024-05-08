@@ -304,100 +304,107 @@
     <div class="w3-container" id="STM-Setup" style="margin-top:75px">
       <h2 class="w3-xxlarge w3-text-red"><b>STM Setup</b></h2>
       <hr style="width:50px;border:5px solid red" class="w3-round">
-      <h3>Tip Making</h3>
-      <p>Chemically etched tip (metal wire) in close proximity to the graphite sample, chilling in a casual ambient
-        condition</p>
-
-      <!-- Photo grid (modal) -->
-      <div class="w3-row-padding">
-        <div class="w3-half">
-          <img src="./stm_etched_tip.jpg" style="width:100%" onclick="onClick(this)"
-            alt="Home made chemically etched metal tip" class="w3-hover-grayscale">
-        </div>
-
-        <div class="w3-half">
-          <img src="./stm_tip_holder.jpg" style="width:96.5%" onclick="onClick(this)" alt="Home made tip holder"
-            class="w3-hover-grayscale">
-        </div>
-      </div>
 
 
+      <div class="w3-container" style="margin-top:75px">
+        <h3>Tip Making</h3>
+        <p>Chemically etched tip (metal wire) in close proximity to the graphite sample, chilling in a casual ambient
+          condition</p>
 
-      <h3>Electronics Design</h3>
-      <p>Our Electronics are home brewed, step by step improved from the breadborad to PCB using KiCAD 3D model design.
-      </p>
-      <!-- Photo grid (modal) -->
-      <div class="w3-row-padding">
-        <div class="w3-half">
-          <img src="./stm_kicad_dac.png" style="width:100%" onclick="onClick(this)" alt="Digital to Analog Converter">
-        </div>
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <img src="./stm_etched_tip.jpg" style="width:100%" onclick="onClick(this)"
+              alt="Home made chemically etched metal tip" class="w3-hover-grayscale">
+          </div>
 
-        <div class="w3-half">
-          <img src="./stm_kicad_4A4B_board.png" style="width:100%" onclick="onClick(this)"
-            alt="Analog to Digital Converter">
-        </div>
-      </div>
-
-
-      <p>Below are a set of 3D views showcasing an electronics board in action, navigating atom locations. We utilized
-        the
-        MCP4922 12-bit digital-to-analog converter and the MCP3208 8-channel analog-to-digital converter, along with a
-        bunch
-        of instrumentation ICs, to set up our lateral scanner electronics. </p>
-      <p> Breadboard DAC designed for our scanner, all under the control of a Raspberry Pi. </p>
-      <p>Upgraded PCB for the DAC, and universal board designed for a pre-amp (10^8 V/A) and PID circuit, powered by 2x
-        12 V
-        batteries.</p>
-      <p> ADC with custom attenuation and bipolar to unipolar conversion unit </p>
-      <p>PID and pre-amp (of course not ideal, but does basic work)</p>
-
-      <!-- Photo grid (modal) -->
-      <div class="w3-row-padding">
-        <div class="w3-half">
-          <img src="./stm_preamp.jpg" style="width:100%" onclick="onClick(this)" alt="preamp & PID controller">
-        </div>
-
-        <div class="w3-half">
-          <img src="./stm_DAC_Raspberry_pi.jpg" style="width:100%" onclick="onClick(this)" alt="DAC & Raspberry pi">
-        </div>
-      </div>
-
-
-
-
-      <h3>Data Collection</h3>
-      <p>More than 15 Python modules are in sync and counting up, for counting atoms! </p>
-
-      <!-- Photo grid (modal) -->
-      <div class="w3-row-padding">
-        <div class="w3-half">
-          <img src="./stm_liveplot_best.jpg" style="width:100%" onclick="onClick(this)" alt="live plot">
-        </div>
-
-        <div class="w3-half">
-          <img src="./6_Code_Liveplot_steps.jpg" style="width:100%" onclick="onClick(this)" alt="liveplot2">
-        </div>
-      </div>
-
-
-      <h3>Hardware Parts</h3>
-      <p>We are currently employing a stepper motor with a worm gear setup for coarse and fine approach adjustments.</p>
-
-
-
-      <p> <i class="fa fa-spinner"></i> Our scanning mechanism currently utilizes a piezoelectric
-      <div class="w3-dropdown-hover"> buzzer
-        <div class="w3-dropdown-content w3-card-4" style="width:250px">
-          <img src="./stm_piezo_plate.jpg" alt="buzzer plate" style="width:100%">
-          <div class="w3-container">
-            <p>budget-friendly piezoelectric plate that works fair enough to see atoms, as tested by many DIY hobbyist
-            </p>
+          <div class="w3-half">
+            <img src="./stm_tip_holder.jpg" style="width:96.5%" onclick="onClick(this)" alt="Home made tip holder"
+              class="w3-hover-grayscale">
           </div>
         </div>
       </div>
-      plate, typically used for speaker purposes. This choice is budget-friendly and provides ample room for elaborate
-      testing. </p>
 
+
+      <div class="w3-container" style="margin-top:75px">
+        <h3>Electronics Design</h3>
+        <p>Our Electronics are home brewed, step by step improved from the breadborad to PCB using KiCAD 3D model
+          design.
+        </p>
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <img src="./stm_kicad_dac.png" style="width:100%" onclick="onClick(this)" alt="Digital to Analog Converter">
+          </div>
+
+          <div class="w3-half">
+            <img src="./stm_kicad_4A4B_board.png" style="width:100%" onclick="onClick(this)"
+              alt="Analog to Digital Converter">
+          </div>
+        </div>
+
+
+        <p>Below are a set of 3D views showcasing an electronics board in action, navigating atom locations. We utilized
+          the
+          MCP4922 12-bit digital-to-analog converter and the MCP3208 8-channel analog-to-digital converter, along with a
+          bunch
+          of instrumentation ICs, to set up our lateral scanner electronics. </p>
+        <p> Breadboard DAC designed for our scanner, all under the control of a Raspberry Pi. </p>
+        <p>Upgraded PCB for the DAC, and universal board designed for a pre-amp (10^8 V/A) and PID circuit, powered by
+          2x
+          12 V
+          batteries.</p>
+        <p> ADC with custom attenuation and bipolar to unipolar conversion unit </p>
+        <p>PID and pre-amp (of course not ideal, but does basic work)</p>
+
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <img src="./stm_preamp.jpg" style="width:100%" onclick="onClick(this)" alt="preamp & PID controller">
+          </div>
+
+          <div class="w3-half">
+            <img src="./stm_DAC_Raspberry_pi.jpg" style="width:100%" onclick="onClick(this)" alt="DAC & Raspberry pi">
+          </div>
+        </div>
+      </div>
+
+
+      <div class="w3-container" style="margin-top:75px">
+        <h3>Data Collection</h3>
+        <p>More than 15 Python modules are in sync and counting up, for counting atoms! </p>
+
+        <!-- Photo grid (modal) -->
+        <div class="w3-row-padding">
+          <div class="w3-half">
+            <img src="./stm_liveplot_best.jpg" style="width:100%" onclick="onClick(this)" alt="live plot">
+          </div>
+
+          <div class="w3-half">
+            <img src="./6_Code_Liveplot_steps.jpg" style="width:100%" onclick="onClick(this)" alt="liveplot2">
+          </div>
+        </div>
+      </div>
+      <div class="w3-container" style="margin-top:75px">
+        <h3>Hardware Parts</h3>
+        <p>We are currently employing a stepper motor with a worm gear setup for coarse and fine approach adjustments.
+        </p>
+
+
+
+        <p> <i class="fa fa-spinner"></i> Our scanning mechanism currently utilizes a piezoelectric
+        <div class="w3-dropdown-hover"> buzzer
+          <div class="w3-dropdown-content w3-card-4" style="width:250px">
+            <img src="./stm_piezo_plate.jpg" alt="buzzer plate" style="width:100%">
+            <div class="w3-container">
+              <p>budget-friendly piezoelectric plate that works fair enough to see atoms, as tested by many DIY hobbyist
+              </p>
+            </div>
+          </div>
+        </div>
+        plate, typically used for speaker purposes. This choice is budget-friendly and provides ample room for elaborate
+        testing. </p>
+      </div>
 
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
           style="float: right; color: gray;">[Home]</a>
@@ -408,12 +415,23 @@
     <div class="w3-container" id="Photoemission-facility" style="margin-top:75px">
       <h2 class="w3-xxlarge w3-text-red"><b>Photoemission facility</b></h2>
       <hr style="width:50px;border:5px solid red" class="w3-round">
-      <h3>Equipment details</h3>
-      <p>Details about equipment...</p>
-      <h3>Characterization methods</h3>
-      <p>Details about characterization methods...</p>
-      <h3>Evaporation facility</h3>
-      <p>Details about evaporation facility...</p>
+
+      <div class="w3-container" style="margin-top:65px">
+        <h3>Equipment details</h3>
+        <p>Details about equipment...</p>
+      </div>
+
+      <div class="w3-container" style="margin-top:65px">
+        <h3>Characterization methods</h3>
+        <p>Details about characterization methods...</p>
+      </div>
+
+
+      <div class="w3-container" style="margin-top:65px">
+        <h3>Evaporation facility</h3>
+        <p>Details about evaporation facility...</p>
+      </div>
+
 
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
           style="float: right; color: gray;">[Home]</a>
