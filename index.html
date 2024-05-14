@@ -3,21 +3,22 @@
 
 <head>
   <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5GC46ESKQ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+  <script async src="https://www.googletagmanager.com/gtag/js?id=G-L5GC46ESKQ"></script>
+  <script>
+    window.dataLayer = window.dataLayer || [];
+    function gtag() { dataLayer.push(arguments); }
+    gtag('js', new Date());
 
-  gtag('config', 'G-L5GC46ESKQ');
-</script>
-  
+    gtag('config', 'G-L5GC46ESKQ');
+  </script>
+
   <title>SIS Lab</title>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+  <script src="https://unpkg.com/scrollreveal"></script>
 
   <!-- Bootstrap Icons CSS -->
   <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
@@ -32,7 +33,9 @@
     h5 {
       font-family: "Poppins", sans-serif
     }
-
+    html{
+      scroll-behavior: smooth;
+    }
     body {
       font-size: 16px;
     }
@@ -64,13 +67,15 @@
     /* Add this CSS style to control the transparency level of side menu*/
     #mySidebar {
       < !-- background-image: url('your-image-url.jpg');
-      -->background-size: cover;
+      -->
+      background-size: cover;
       background-position: center;
       background-color: rgba(235, 231, 231, 0.8);
       /* 80% black with 0.8 opacity */
     }
 
-    < !-- cooming soon curson effect -->@keyframes typing {
+    < !-- cooming soon curson effect -->
+    @keyframes typing {
       from {
         width: 0
       }
@@ -88,7 +93,9 @@
       border-right: .15em solid;
     }
 
-    < !-- cooming soon curson effect -->< !-- style for drop-down cv -->.cv-section {
+    < !-- cooming soon curson effect -->
+    < !-- style for drop-down cv -->
+    .cv-section {
       margin-bottom: 20px;
     }
 
@@ -105,6 +112,12 @@
     }
 
     < !-- end style for drop-down cv -->
+    .listpublication li {
+      <!-- margin-bottom: 50px;  -->
+      margin: 50px;
+    }
+    
+   
   </style>
 </head>
 
@@ -196,19 +209,19 @@
 
 
     <!-- About -->
-    <div class="w3-container" id="about" style="margin-top:75px">
+    <div class="w3-container" id="about" style="margin-top:200px">
       <h1 class="w3-xxxlarge w3-text-red"><b>About</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
       <p>We are setting up the state-of-the-art Ultrahigh Vacuum based Surface and Interface Science research group in
         IIT Bombay. </p>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
       </p>
     </div>
 
 
     <!-- Interest -->
-    <div class="w3-container" id="Interest" style="margin-top:75px">
+    <div class="w3-container" id="Interest" style="margin-top:200px">
       <h1 class="w3-xxxlarge w3-text-red"><b>Our Interest</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
       <p>Group research interests are focused on (but not limited to) electronic structure studies of:</p>
@@ -221,12 +234,12 @@
       </ul>
       <p>For more details feel free to <a href="#contact">contact</a> over email or in-person.</p>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
       </p>
     </div>
 
     <!-- Ongoing Projects -->
-    <div class="w3-container" id="ongoing-projects" style="margin-top:75px">
+    <div class="w3-container" id="ongoing-projects" style="margin-top:200px">
       <h1 class="w3-xxxlarge w3-text-red"><b>Ongoing Projects</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
       <p>There are multiple choices of projects available immediately for short and long term. Proposed topics are:</p>
@@ -244,13 +257,13 @@
       <p>Feel free to <a href="#contact">contact</a> for more details such as currently available instrument/facility
         for mentioned projects and/or discuss about your interest.</p>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
       </p>
     </div>
 
 
     <!-- Opportunities -->
-    <div class="w3-container" id="Opportunities" style="margin-top:75px">
+    <div class="w3-container" id="Opportunities" style="margin-top:200px">
       <h1 class="w3-xxxlarge w3-text-red"><b>Opportunities</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
       <p>If you have interest in developing electronic circuits, and looking for open opportunity in hands-on scientific
@@ -265,12 +278,12 @@
       </ul>
       <p>Feel free to <a href="#contact">contact</a> for more details or visit us in the Laboratory.</p>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
       </p>
     </div>
 
     <!-- Techniques -->
-    <div class="w3-container" id="Techniques" style="margin-top:75px">
+    <div class="w3-container" id="Techniques" style="margin-top:200px">
       <h1 class="w3-xxxlarge w3-text-red"><b>Techniques</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
       <p>We are currently working with our</p>
@@ -283,14 +296,14 @@
       </div>
 
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
       </p>
     </div>
 
 
 
     <!-- Members -->
-    <div class="w3-container" id="Members" style="margin-top:75px">
+    <div class="w3-container" id="Members" style="margin-top:200px">
       <h1 class="w3-xxxlarge w3-text-red"><b>Members</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
 
@@ -353,25 +366,25 @@
         </div>
       </div>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float:right;">[Home]</a></p>
+          style="float:right;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a></p>
     </div>
 
     <!-- Publications -->
-    <div class="w3-container" id="publications" style="margin-top:75px">
+    <div class="w3-container" id="publications" style="margin-top:200px">
       <h1 class="w3-xxxlarge w3-text-red"><b>Publications</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
-      <ul>
+      <ul class="listpublication" >
         <li><a href="https://orcid.org/0000-0001-7305-1368">ORCID</a></li>
         <li><a href="https://scholar.google.com/citations?user=ZwWj7ssAAAAJ">Google Scholar</a></li>
         <li><a href="https://www.researchgate.net/profile/M-Maniraj">ResearchGate</a></li>
       </ul>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
       </p>
     </div>
 
     <!-- STM Setup -->
-    <div class="w3-container" id="STM-Setup" style="margin-top:75px">
+    <div class="w3-container" id="STM-Setup" style="margin-top:200px">
       <h2 class="w3-xxlarge w3-text-red"><b>STM Setup</b></h2>
       <hr style="width:50px;border:5px solid red" class="w3-round">
 
@@ -400,7 +413,7 @@
       </div>
 
 
-      <div class="w3-container" style="margin-top:75px">
+      <div class="w3-container" style="margin-top:200px">
         <h3><strong>Electronics Design</strong></h3>
         <p>Our Electronics are home brewed, step by step improved from the breadborad to PCB using KiCAD 3D model
           design.
@@ -447,7 +460,7 @@
       </div>
 
 
-      <div class="w3-container" style="margin-top:75px">
+      <div class="w3-container" style="margin-top:200px">
         <h3><strong>Data Collection</strong></h3>
         <p>More than 15 Python modules are in sync and counting up, for counting atoms! </p>
 
@@ -466,7 +479,7 @@
 
 
 
-      <div class="w3-container" style="margin-top:75px">
+      <div class="w3-container" style="margin-top:200px">
         <h3><strong>Hardware Parts</strong></h3>
         <p>We are currently employing a stepper motor with a worm gear setup for coarse and fine approach adjustments.
         </p>
@@ -488,12 +501,12 @@
       </div>
 
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
       </p>
     </div>
 
     <!-- Photoemission facility -->
-    <div class="w3-container" id="Photoemission-facility" style="margin-top:75px">
+    <div class="w3-container" id="Photoemission-facility" style="margin-top:200px">
       <h2 class="w3-xxlarge w3-text-red"><b>Photoemission facility</b></h2>
       <hr style="width:50px;border:5px solid red" class="w3-round">
 
@@ -529,11 +542,11 @@
 
 
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
       </p>
     </div>
     <!-- Event -->
-    <div class="w3-container" id="event" style="margin-top:75px">
+    <div class="w3-container" id="event" style="margin-top:200px">
       <h1 class="w3-xxxlarge w3-text-red"><b>Events</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
       <div class="w3-container" style="margin-top:65px">
@@ -559,13 +572,13 @@
 
       </div>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
       </p>
     </div>
 
 
     <!-- Contact -->
-    <div class="w3-container" id="contact" style="margin-top:75px">
+    <div class="w3-container" id="contact" style="margin-top:200px">
       <h1 class="w3-xxxlarge w3-text-red"><b>Contact</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
 
@@ -580,7 +593,8 @@
       <p><i class="fa fa-cogs fa-fw w3-margin-right w3-large w3-text-teal"></i> <a
           href="https://manirajmahalingam.github.io/" target="_blank">My Profile</a></p>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i>
+          </a>
       </p>
     </div>
   </div>
@@ -633,6 +647,19 @@
         subMenu.scrollIntoView(false);
       }
     }
+
+    ScrollReveal({
+      reset: true, 
+      distance: '60px',
+      duration: 2500,
+      delay: 400
+    });
+
+    ScrollReveal().reveal('.w3-jumbo', { delay: 300, origin: 'left'});
+    ScrollReveal().reveal('.w3-xxxlarge', { delay: 100, origin: 'left'});
+
+    ScrollReveal().reveal('.w3-round', { delay: 300, origin: 'right'});
+    ScrollReveal().reveal('.listpublication li', { delay: 700, origin: 'bottom', interval: 200});
 
 
   </script>
