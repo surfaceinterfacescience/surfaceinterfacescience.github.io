@@ -2,640 +2,296 @@
 <html lang="en">
 
 <head>
-  <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-L5GC46ESKQ"></script>
+    <!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-S5FFBY7ZGM"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'G-L5GC46ESKQ');
+  gtag('config', 'G-S5FFBY7ZGM');
 </script>
-  
-  <title>SIS Lab</title>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>sprkkr-workshop-iitbombay</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
 
-  <!-- Bootstrap Icons CSS -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.7.2/font/bootstrap-icons.css" rel="stylesheet">
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: "Poppins", sans-serif;
+        }
 
+        section {
+            position: relative;
+            width: 100%;
+            min-height: 100vh;
+            display: flex;
+            flex-direction: column;
+            justify-content: flex-start;
+            background-color: rgba(239, 213, 174, 0.799);
+            background-size: cover;
+            background-position: center;
+        }
 
-  <style>
-    body,
-    h1,
-    h2,
-    h3,
-    h4,
-    h5 {
-      font-family: "Poppins", sans-serif
-    }
+        header {
+            position: relative;
+            top: 0;
+            width: 100%;
+            padding: 60px 60px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
 
-    body {
-      font-size: 16px;
-    }
+        header .logo {
+            position: relative;
+            color: #5fb7d4;
+            font-size: 30px;
+            text-align: none;
+            text-transform: uppercase;
+            font-weight: 900;
+            letter-spacing: 1px;
+        }
 
+        header .navigation a {
+            color: #000;
+            background: #d1d677;
+            text-decoration: none;
+            font-weight: 500;
+            letter-spacing: 1px;
+            padding: 2px 15px;
+            border-radius: 20px;
+            transition: 1.9s;
+            transition-property: #9d4a4a;
+        }
 
-    .w3-half img {
-      margin-bottom: -6px;
-      margin-top: 16px;
-      opacity: 0.8;
-      cursor: pointer
-    }
+        header .navigation a:not(:last-child) {
+            margin-right: 25px;
+        }
 
-    .w3-half img:hover {
-      opacity: 1
-    }
+        header .navigation a:hover {
+            background: #6d66cd;
+        }
 
-    /* Style for submenus */
-    .sub-menu {
-      display: none;
-      max-height: 300px;
-      /* Adjust the height as needed */
-      overflow-y: auto;
-    }
+        .content {
+            max-width: 550px;
+            margin: 60px 50px;
+        }
 
-    .sub-menu.show {
-      display: block;
-    }
+        .content .info h2 {
+            color: rgb(109, 144, 232);
+            font-size: 55px;
+            text-transform: uppercase;
+            font-weight: 800;
+            letter-spacing: 2px;
+            line-height: 60px;
+            margin-bottom: 30px;
+        }
 
-    /* Add this CSS style to control the transparency level of side menu*/
-    #mySidebar {
-      < !-- background-image: url('your-image-url.jpg');
-      -->background-size: cover;
-      background-position: center;
-      background-color: rgba(235, 231, 231, 0.8);
-      /* 80% black with 0.8 opacity */
-    }
+        .content .info h2 span {
+            text-transform: lowercase;
+            color: #061702;
+            font-size: 50px;
+            font-weight: 600;
+        }
 
-    < !-- cooming soon curson effect -->@keyframes typing {
-      from {
-        width: 0
-      }
+        .content .info p {
+            font-size: 16px;
+            font-weight: 500;
+            margin-bottom: 40px;
+        }
 
-      to {
-        width: 30%
-      }
-    }
+        .content .info-btn {
+            color: #d36262;
+            background: #63ca6c;
+            text-decoration: none;
+            text-transform: uppercase;
+            font-weight: 700;
+            letter-spacing: 2px;
+            padding: 10px 20px;
+            border-radius: 5px;
+            transition: 0.3s;
+            transition-property: background;
+        }
 
-    #coming-soon {
-      display: inline-block;
-      animation: typing 5s steps(50) infinite;
-      white-space: nowrap;
-      overflow: hidden;
-      border-right: .15em solid;
-    }
+        .content .info-btn:hover {
+            background: #c7cd78;
+        }
 
-    < !-- cooming soon curson effect -->< !-- style for drop-down cv -->.cv-section {
-      margin-bottom: 20px;
-    }
+        .media-icons {
+            /* for facebook */
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin: auto;
+        }
 
-    .cv-section h3 {
-      font-size: 20px;
-      font-weight: bold;
-      color: #333;
-      margin-bottom: 10px;
-    }
+        .media-icons a {
+            position: relative;
+            color: #111;
+            font-size: 35px;
+            transition: 0.5s;
+            transition-property: transform;
+        }
 
-    .cv-section p {
-      font-size: 14px;
-      color: #666;
-    }
+        .media-icons a:not(:last-child) {
+            margin-right: 60px;
+        }
 
-    < !-- end style for drop-down cv -->
-  </style>
+        .media-icons a:hover {
+            transform: scale(1.5);
+        }
+
+        label {
+            display: none;
+        }
+
+        #menu-toggle {
+            z-index: 3;
+            display: none;
+        }
+
+        /* Responseive style */
+        @media (max-width: 960px) {
+           
+            header .navigation {
+                display: none;
+            }
+
+            label {
+                display: block;
+                font-size: 25px;
+                cursor: pointer;
+                transition: 0.3s;
+                transition-property: #a4d32d;
+            }
+
+            label:hover {
+                color: #6cbd46;
+            }
+
+            label .close-btn {
+                display: none;
+            }
+
+            #menu-toggle:checked~header .navigation {
+                z-index: 2;
+                position: fixed;
+                background: rgba(239, 213, 174, 0.9);
+                top: 0;
+                bottom: 0;
+                left: 0;
+                right: 0;
+                display: flex;
+                flex-direction: column;
+                justify-content: center;
+                align-items: center;
+            }
+
+            #menu-toggle:checked~header .navigation a {
+                font-weight: 700;
+                margin-right: 0;
+                margin-bottom: 50px;
+                letter-spacing: 2px;
+            }
+
+            #menu-toggle:checked~header label .menu-btn{
+                display: none;
+            }
+
+            #menu-toggle:checked~header label .close-btn{
+                z-index: 2;
+                display: block;
+                position: fixed;
+            }
+
+            label .menu-btn {
+                position: absolute;
+            }
+
+            header .logo {
+                font-size: 26px;
+                font-weight: 550;
+                position: absolute;
+                bottom: 29px;
+            }
+
+            .content .info h2 {
+                font-size: 45px;
+                line-height: 50px;
+            }
+
+            .content .info h2 span {
+                font-size: 40px;
+                font-weight: 600;
+            }
+
+            .content .info p {
+                font-size: 14px;
+            }
+        }
+
+        @media (max-width: 560px) {
+            
+            .content .info h2 {
+                font-size: 35px;
+                line-height: 40px;
+            }
+
+            .content .info h2 span {
+                font-size: 30px;
+                font-weight: 610;
+            }
+
+            .content .info p {
+                font-size: 14px;
+            }
+        }
+    </style>
 </head>
 
 <body>
-
-  <!-- Sidebar/menu -->
-  <nav class="w3-sidebar w3-Dark-gray w3-collapse w3-top w3-large w3-padding"
-    style="z-index:3;width:300px;font-weight:bold;" id="mySidebar"><br>
-    <a href="javascript:void(0)" onclick="w3_close()" class="w3-button w3-hide-large w3-display-topleft"
-      style="width:100%;font-size:22px">(&times;)</a>
-    <div class="w3-container">
-      <h3 class="w3-padding-30"><b>Surface & Interface Science Laboratory</b></h3>
-    </div>
-    <div class="w3-bar-block">
-      <a href="#" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Home</a>
-      <a href="#about" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">About</a>
-      <a href="#Interest" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Interest</a>
-      <a href="#ongoing-projects" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Ongoing Projects</a>
-      <a href="#Opportunities" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Opportunities</a>
-      <a href="#Techniques" onclick="toggleSubMenu('techniquesSubMenu')"
-        class="w3-bar-item w3-button w3-hover-white">Techniques <i class="fa fa-caret-down"></i></a>
-      <div id="techniquesSubMenu" class="sub-menu">
-        <a href="#Techniques" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">-Tech. Overview</a>
-        <a href="#STM-Setup" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">-STM Setup</a>
-        <a href="#Photoemission-facility" onclick="w3_close()"
-          class="w3-bar-item w3-button w3-hover-white">-Photoemission facility</a>
-      </div>
-      <a href="#Members" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Members</a>
-      <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Publications</a>
-      <a href="#event" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Event</a>
-      <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
-    </div>
-  </nav>
-
-
-
-  <!-- Top menu on small screens -->
-  <header class="w3-container w3-top w3-hide-large w3-red w3-xlarge w3-padding">
-    <a href="javascript:void(0)" class="w3-button w3-red w3-margin-right" onclick="w3_open()">☰</a>
-    <span>Welcome!</span>
-  </header>
-
-  <!-- Overlay effect when opening sidebar on small screens -->
-  <div class="w3-overlay w3-hide-large" onclick="w3_close()" style="cursor:pointer" title="close side menu"
-    id="myOverlay"></div>
-
-  <!-- !PAGE CONTENT! -->
-  <div class="w3-main" style="margin-left:340px;margin-right:40px">
-
-    <!-- Header -->
-    <div class="w3-container" style="margin-top:80px" id="Home">
-      <h1 class="w3-jumbo"><b>Surface and Interface Science Laboratory</b></h1>
-      <div class="w3-panel w3-leftbar w3-light-grey">
-        <p><i><strong>"Surface is, in fact, an interface; Interface is, indeed, the Device."</strong></i></p>
-      </div>
-
-
-      <h1 class="w3-xxxlarge w3-text-red"><b>Quick view of Laboratory</b></h1>
-      <hr style="width:50px;border:5px solid red" class="w3-round">
-    </div>
-
-    <!-- Photo grid (modal) -->
-    <div class="w3-row-padding">
-      <div class="w3-half">
-        <img src="./1_STM_Electronics_stack.jpg" style="width:100%" onclick="onClick(this)"
-          alt="Home made STM electronics">
-        <img src="./2_STM_Box.jpg" style="width:100%" onclick="onClick(this)" alt="Faraday Cage for STM">
-        <img src="./3_Before_ESCA_Arrived.jpg" style="width:100%" onclick="onClick(this)" alt="Lab one month ago">
-      </div>
-
-      <div class="w3-half">
-        <img src="./4_ESCA.jpg" style="width:100%" onclick="onClick(this)"
-          alt="Electron Spectroscopy for Chemical Analysis">
-        <img src="./5_Textronics.jpg" style="width:100%" onclick="onClick(this)"
-          alt="Brand New Dual Polarity High Voltage Electronics">
-        <img src="./6_Code_Liveplot_steps.jpg" style="width:100%" onclick="onClick(this)"
-          alt="Live plot STM Data collection using Python">
-      </div>
-    </div>
-
-    <!-- Modal for full size images on click-->
-    <div id="modal01" class="w3-modal w3-black" style="padding-top:0" onclick="this.style.display='none'">
-      <span class="w3-button w3-black w3-xxlarge w3-display-topright">x</span>
-      <div class="w3-modal-content w3-animate-zoom w3-center w3-transparent w3-padding-64">
-        <img id="img01" class="w3-image">
-        <p id="caption"></p>
-      </div>
-    </div>
-
-
-    <!-- About -->
-    <div class="w3-container" id="about" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-red"><b>About</b></h1>
-      <hr style="width:50px;border:5px solid red" class="w3-round">
-      <p>We are setting up the state-of-the-art Ultrahigh Vacuum based Surface and Interface Science research group in
-        IIT Bombay. </p>
-      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
-      </p>
-    </div>
-
-
-    <!-- Interest -->
-    <div class="w3-container" id="Interest" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-red"><b>Our Interest</b></h1>
-      <hr style="width:50px;border:5px solid red" class="w3-round">
-      <p>Group research interests are focused on (but not limited to) electronic structure studies of:</p>
-      <ul>
-        <li>Quantum materials such as Quantum Spin Hall materials</li>
-        <li>Heterostructure of layered materials</li>
-        <li>Metallic and Oxide Quasicrystals</li>
-        <li>Organic and Inorganic adsorbates</li>
-        <li>Design and Fabrications of State of the Art Instruments</li>
-      </ul>
-      <p>For more details feel free to <a href="#contact">contact</a> over email or in-person.</p>
-      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
-      </p>
-    </div>
-
-    <!-- Ongoing Projects -->
-    <div class="w3-container" id="ongoing-projects" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-red"><b>Ongoing Projects</b></h1>
-      <hr style="width:50px;border:5px solid red" class="w3-round">
-      <p>There are multiple choices of projects available immediately for short and long term. Proposed topics are:</p>
-      <ul>
-        <li>In-situ growth & characterisation of graphene analog 2D materials</li>
-        <li>Growth & investigation of Oxide Quasicrystals -Structure studies using Low Energy Electron Diffraction</li>
-        <li>Inorganic and Organic adsorbates adsorption studies on Oxide Quasicrystals</li>
-        <li>Designing the Heterostructure by mechanical stacking and its surface structure studies</li>
-        <li>Developing electronics circuits suitable for piezoelectric transducer for nanometer scale spatial imaging
-        </li>
-        <li>Designing and development of tools for photon counter using digital signal processing method</li>
-        <li>Design and implementation of spin-polarised and non-polarised electron source for surface science
-          investigation</li>
-      </ul>
-      <p>Feel free to <a href="#contact">contact</a> for more details such as currently available instrument/facility
-        for mentioned projects and/or discuss about your interest.</p>
-      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
-      </p>
-    </div>
-
-
-    <!-- Opportunities -->
-    <div class="w3-container" id="Opportunities" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-red"><b>Opportunities</b></h1>
-      <hr style="width:50px;border:5px solid red" class="w3-round">
-      <p>If you have interest in developing electronic circuits, and looking for open opportunity in hands-on scientific
-        instrument design, either full or part time, you may contact.</p>
-      <p>Looking for:</p>
-      <ul>
-        <li>Post-Doctoral fellow </li>
-        <li>Ph.D.</li>
-        <li>M.Sc. Project</li>
-        <li>B.Tech. Project</li>
-        <li>Any type of short term project (about 1 to 6 month)</li>
-      </ul>
-      <p>Feel free to <a href="#contact">contact</a> for more details or visit us in the Laboratory.</p>
-      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
-      </p>
-    </div>
-
-    <!-- Techniques -->
-    <div class="w3-container" id="Techniques" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-red"><b>Techniques</b></h1>
-      <hr style="width:50px;border:5px solid red" class="w3-round">
-      <p>We are currently working with our</p>
-      <ul>
-        <li>Home-build <a href="#STM-Setup">STM Setup</a></li>
-        <li>Ultrahigh vacuum based <a href="#Photoemission-facility">Photoemission </a> facility</li>
-      </ul>
-      <div class="w3-container w3-center">
-        <img src="research_image.jpg" alt="Research Image" style="max-width: 100%; height: auto;">
-      </div>
-
-      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
-      </p>
-    </div>
-
-
-
-    <!-- Members -->
-    <div class="w3-container" id="Members" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-red"><b>Members</b></h1>
-      <hr style="width:50px;border:5px solid red" class="w3-round">
-
-      <p><b>Our members are thoughtfully chosen</b>:</p>
-    </div>
-
-    <!-- The Team -->
-    <div class="w3-row-padding w3-grayscale">
-      <div class="w3-col m6 w3-margin-bottom">
-        <div class="w3-light-grey">
-          <img src="/manirajphoto.jpg" alt="maniraj" style="width:100%">
-          <div class="w3-container">
-            <h3>Prof. Dr. Maniraj Mahalingam</h3>
-            <p class="w3-opacity">Assistant Professor</p>
-            <p>Group leader and active team player.</p>
-            <!-- short cv -->
-            <div class="w3-dropdown-hover"> Quick CV
-              <div class="w3-dropdown-content w3-card-4" style="width:250px">
-                <div class="w3-container">
-                  <div class="cv-section">
-                    <p>PhD(2007-2014) UGC-DAE CSR, Indore, India</p>
-                    <p>PDF(2014-2019) University of Kaiserslautern, Kaiserslautern, Germany</p>
-                    <p>PDF(2019-2021) Martin Luther University, Halle, Germany</p>
-                  </div>
-                </div>
-              </div>
-            </div> <!-- short cv -->
-          </div>
-        </div>
-      </div>
-      <div class="w3-col m6 w3-margin-bottom">
-        <div class="w3-light-grey">
-          <img src="/priyamedhaphoto.jpg" alt="priyamedha" style="width:100%">
-          <div class="w3-container">
-            <h3>Dr. Priyamedha K. R. Sharma</h3>
-            <p class="w3-opacity">Post-Doctoral Fellow</p>
-            <p>Received PhD from IIT Mandi. Working from Dec. 2022.</p>
-          </div>
-        </div>
-      </div>
-      <div class="w3-col m6 w3-margin-bottom">
-        <div class="w3-light-grey">
-          <img src="/shanmiphoto.jpg" alt="shanmi" style="width:100%">
-          <div class="w3-container">
-            <h3>Mr. Shanmi Deibor Syntem <br> </h3>
-            <p class="w3-opacity">Ph.D. Fellow</p>
-            <p>M.Sc. from IIT Madras. Working from Sep. 2022.</p>
-          </div>
-        </div>
-      </div>
-
-      <div class="w3-col m6 w3-margin-bottom">
-        <div class="w3-light-grey">
-          <img src="/saikatphoto.jpg" alt="saikat" style="width:100%">
-          <div class="w3-container">
-            <h3>Mr. Saikat Ghoah <br> </h3>
-            <p class="w3-opacity">Summer Intern 2024</p>
-            <p>M.Sc. from IIT Bombay 2024.</p>
-          </div>
-        </div>
-      </div>
-      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float:right;">[Home]</a></p>
-    </div>
-
-    <!-- Publications -->
-    <div class="w3-container" id="publications" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-red"><b>Publications</b></h1>
-      <hr style="width:50px;border:5px solid red" class="w3-round">
-      <ul>
-        <li><a href="https://orcid.org/0000-0001-7305-1368">ORCID</a></li>
-        <li><a href="https://scholar.google.com/citations?user=ZwWj7ssAAAAJ">Google Scholar</a></li>
-        <li><a href="https://www.researchgate.net/profile/M-Maniraj">ResearchGate</a></li>
-      </ul>
-      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
-      </p>
-    </div>
-
-    <!-- STM Setup -->
-    <div class="w3-container" id="STM-Setup" style="margin-top:75px">
-      <h2 class="w3-xxlarge w3-text-red"><b>STM Setup</b></h2>
-      <hr style="width:50px;border:5px solid red" class="w3-round">
-
-      <p>Scanning Tunneling Microscopy is used to investigate surface morphology and atomic structure with
-        angstrom-range accuracy and picometer-range precision in optimal cases.</p>
-
-
-
-      <div class="w3-container" style="margin-top:50px">
-        <h3><strong>Tip Making</strong></h3>
-        <p>Chemically etched tip (metal wire) in close proximity to the graphite sample, chilling in a casual ambient
-          condition</p>
-
-        <!-- Photo grid (modal) -->
-        <div class="w3-row-padding">
-          <div class="w3-half">
-            <img src="./stm_etched_tip.jpg" style="width:100%" onclick="onClick(this)"
-              alt="Home made chemically etched metal tip" class="w3-hover-grayscale">
-          </div>
-
-          <div class="w3-half">
-            <img src="./stm_tip_holder.jpg" style="width:96.5%" onclick="onClick(this)" alt="Home made tip holder"
-              class="w3-hover-grayscale">
-          </div>
-        </div>
-      </div>
-
-
-      <div class="w3-container" style="margin-top:75px">
-        <h3><strong>Electronics Design</strong></h3>
-        <p>Our Electronics are home brewed, step by step improved from the breadborad to PCB using KiCAD 3D model
-          design.
-        </p>
-
-
-
-        <p>Below are a set of 3D views showcasing an electronics board in action, navigating atom locations. We utilized
-          the
-          MCP4922 12-bit digital-to-analog converter and the MCP3208 8-channel analog-to-digital converter, along with a
-          bunch
-          of instrumentation ICs, to set up our lateral scanner electronics. </p>
-
-        <!-- Photo grid (modal) -->
-        <div class="w3-row-padding">
-          <div class="w3-half">
-            <img src="./stm_kicad_dac.png" style="width:100%" onclick="onClick(this)" alt="Digital to Analog Converter">
-          </div>
-
-          <div class="w3-half">
-            <img src="./stm_kicad_4A4B_board.png" style="width:100%" onclick="onClick(this)"
-              alt="Analog to Digital Converter">
-          </div>
-        </div>
-
-        <p> Breadboard DAC designed for our scanner, all under the control of a Raspberry Pi. </p>
-        <p>Upgraded PCB for the DAC, and universal board designed for a pre-amp (10^8 V/A) and PID circuit, powered by
-          2x
-          12 V
-          batteries.</p>
-        <p> ADC with custom attenuation and bipolar to unipolar conversion unit </p>
-        <p>PID and pre-amp (of course not ideal, but does basic work)</p>
-
-        <!-- Photo grid (modal) -->
-        <div class="w3-row-padding">
-          <div class="w3-half">
-            <img src="./stm_preamp.jpg" style="width:100%" onclick="onClick(this)" alt="preamp & PID controller">
-          </div>
-
-          <div class="w3-half">
-            <img src="./stm_DAC_Raspberry_pi.jpg" style="width:100%" onclick="onClick(this)" alt="DAC & Raspberry pi">
-          </div>
-        </div>
-      </div>
-
-
-      <div class="w3-container" style="margin-top:75px">
-        <h3><strong>Data Collection</strong></h3>
-        <p>More than 15 Python modules are in sync and counting up, for counting atoms! </p>
-
-        <!-- Photo grid (modal) -->
-        <div class="w3-row-padding">
-          <div class="w3-half">
-            <img src="./stm_liveplot_best.jpg" style="width:100%" onclick="onClick(this)" alt="live plot">
-          </div>
-
-          <div class="w3-half">
-            <img src="./6_Code_Liveplot_steps.jpg" style="width:100%" onclick="onClick(this)" alt="liveplot2">
-          </div>
-        </div>
-      </div>
-
-
-
-
-      <div class="w3-container" style="margin-top:75px">
-        <h3><strong>Hardware Parts</strong></h3>
-        <p>We are currently employing a stepper motor with a worm gear setup for coarse and fine approach adjustments.
-        </p>
-
-
-
-        <p> <i class="fa fa-spinner"></i> Our scanning mechanism currently utilizes a piezoelectric
-        <div class="w3-dropdown-hover"> buzzer plate,
-          <div class="w3-dropdown-content w3-card-4" style="width:250px">
-            <img src="./stm_piezo_plate.jpg" alt="buzzer plate" style="width:100%">
-            <div class="w3-container">
-              <p>budget-friendly piezoelectric plate that works fair enough to see atoms, as tested by many DIY hobbyist
-              </p>
+    <section>
+        <input type="checkbox" id="menu-toggle">
+        <header>
+            <h2><a href="https://surfaceinterfacescience.github.io" class="logo">S!S</a></h2>
+            <div class="navigation">
+                <a href="#">Home</a>
+                <a href="#">About</a>
+                <a href="#">Event</a>
+                <a href="#">Speakers</a>
+                <a href="#">Schedule</a>
+                <a href="#">Contact</a>
             </div>
-          </div>
+            
+            <label for="menu-toggle">
+                <i class="fas fa-bars menu-btn"></i>
+                <i class="fas fa-times close-btn"></i>
+            </label>
+        </header>
+        <div class="content">
+            <div class="info">
+                <h2>SPR-KKR hands-on training workshop <br> <span>Want to take part?</span></h2>
+                <p>Prof. Jan Minar from the University of West Bohemia, Czech Republic, and <a href="https://surfaceinterfacescience.github.io">our group</a> from IIT Bombay will jointly conduct a hands-on workshop for the Munich <a href="https://www.ebert.cup.uni-muenchen.de/old/index.php?option=com_content&view=article&id=8%3Asprkkr&catid=4%3Asoftware&Itemid=7&lang=en">SPR-KKR</a> band structure program package code usage at IIT Bombay. The exact date will be updated soon on this website; tentatively, it will be during any week in August-September 2024. Please save this <a href="https://surfaceinterfacescience.github.io/sprkkr-workshop/">website</a> page for further updates.</p>
+
+<p>If you are interested in participating as a participant, feel free to <a href="https://surfaceinterfacescience.github.io/#contact">contact</a> me.</p>
+
+
+                <a href="#" class="info-btn">More Info</a>
+            </div>
         </div>
-        typically used for speaker purposes. This choice is budget-friendly and provides ample room for elaborate
-        testing. </p>
-      </div>
+        <div class="media-icons">
+            <!-- <a href="#"><i class="fab fa-facebook-f"></i></a> -->
+            <a href="mailto:maniraj@iitb.ac.in"><i class="fa-solid fa-envelope"></i> </a>
 
-      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
-      </p>
-    </div>
-
-    <!-- Photoemission facility -->
-    <div class="w3-container" id="Photoemission-facility" style="margin-top:75px">
-      <h2 class="w3-xxlarge w3-text-red"><b>Photoemission facility</b></h2>
-      <hr style="width:50px;border:5px solid red" class="w3-round">
-
-      <div class="w3-container" style="margin-top:65px">
-        <h3><strong>Equipment details</strong></h3>
-        <p>The instrument consists of both monochromatized and non-monochromatized X-ray light, and ultraviolet light
-          sources. It also includes a hemispherical electron energy analyzer for photoemission spectroscopy studies.</p>
-        <p>For surface preparation, we have Ar gas sputtering, annealing (heating), and scraping facilities.</p>
-
-      </div>
-
-      <div class="w3-container" style="margin-top:65px">
-        <h3><strong>Characterization methods</strong></h3>
-        <ul>
-          <li>X-ray photoemission spectroscopy</li>
-          <li>Ultraviolet photoemission spectroscopy</li>
-          <li>Inverse photoemission spectroscopy (design and actions are under plan/progress)</li>
-        </ul>
-
-      </div>
-
-
-      <div class="w3-container" style="margin-top:65px">
-        <h3><strong>Evaporation Facility</strong></h3>
-        <p>We are currently in the process of developing our own thermal evaporator suitable for:</p>
-        <ul>
-          <li>Inorganic elemental metals</li>
-          <li>Organic molecules</li>
-        </ul>
-        <p>If you are interested in joining us in building them, feel free to <a href="#contact">contact</a> us.</p>
-      </div>
-
-
-
-      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
-      </p>
-    </div>
-    <!-- Event -->
-    <div class="w3-container" id="event" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-red"><b>Events</b></h1>
-      <hr style="width:50px;border:5px solid red" class="w3-round">
-      <div class="w3-container" style="margin-top:65px">
-        <h3>
-          SPR-KRR workshop <span id="coming-soon" style="color:red; background-color: rgb(71, 228, 71)">soon!</span>
-        </h3>
-
-
-        <p>Prof. Jan Minar from the University of West Bohemia, Czech Republic, and our group from IIT Bombay will
-          jointly conduct a hands-on workshop on <a
-            href="https://www.ebert.cup.uni-muenchen.de/old/index.php?option=com_content&view=article&id=8%3Asprkkr&catid=4%3Asoftware&Itemid=7&lang=en">SPR-KKR</a>
-          code usage in IIT Bombay. The exact date will be updated soon in
-          the
-          <a href="https://surfaceinterfacescience.github.io/sprkkr-workshop/">website</a>, tentatively it is in the
-          month of August-September 2024. Please save the <a
-            href="https://surfaceinterfacescience.github.io/sprkkr-workshop/">website</a> page for further
-          updates.
-        </p>
-
-        <p>If you are interested in participating as a participant, feel free to <a href="#contact">contact</a>
-          me.</p>
-
-
-      </div>
-      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
-      </p>
-    </div>
-
-
-    <!-- Contact -->
-    <div class="w3-container" id="contact" style="margin-top:75px">
-      <h1 class="w3-xxxlarge w3-text-red"><b>Contact</b></h1>
-      <hr style="width:50px;border:5px solid red" class="w3-round">
-
-      <p><i class="fa fa-map-marker fa-fw w3-margin-right w3-large w3-text-teal"></i> Address: Department of Physics,
-        Indian Institute of Technology Bombay, Powai, Mumbai- 400076, Maharashtra, India.</p>
-      <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i> Email: maniraj@iitb.ac.in</p>
-      <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i> Phone: [ext] 6515</p>
-      <p><i class="fa fa-map fa-fw w3-margin-right w3-large w3-text-teal"></i> <a
-          href="https://maps.app.goo.gl/3iTz91sFUsXnrvSe9" target="_blank">Google Map</a></p>
-      <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i> Assistant Professor</p>
-      <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i> IIT Bombay</p>
-      <p><i class="fa fa-cogs fa-fw w3-margin-right w3-large w3-text-teal"></i> <a
-          href="https://manirajmahalingam.github.io/" target="_blank">My Profile</a></p>
-      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;">[Home]</a>
-      </p>
-    </div>
-  </div>
-
-  <!-- W3.CSS Container -->
-  <div class="w3-light-grey w3-container w3-padding-32" style="margin-top:175px;padding-right:90px">
-    <p class="w3-right"> <strong>You didn't come this far to only come this far !</strong><br> <br> Powered by w3.css
-    </p>
-  </div>
-
-  <script>
-    // Script to open and close sidebar
-    function w3_open() {
-      document.getElementById("mySidebar").style.display = "block";
-      document.getElementById("myOverlay").style.display = "block";
-    }
-
-    function w3_close() {
-      document.getElementById("mySidebar").style.display = "none";
-      document.getElementById("myOverlay").style.display = "none";
-    }
-
-    // Modal Image Gallery
-    function onClick(element) {
-      document.getElementById("img01").src = element.src;
-      document.getElementById("modal01").style.display = "block";
-      var captionText = document.getElementById("caption");
-      captionText.innerHTML = element.alt;
-    }
-
-    // Function to toggle submenu visibility
-    function toggleSubMenu(subMenuId) {
-      var subMenu = document.getElementById(subMenuId);
-      if (subMenu.style.display === "block") {
-        subMenu.style.display = "none";
-      } else {
-        subMenu.style.display = "block";
-      }
-    }
-
-
-    // Function to toggle submenu visibility
-    function toggleSubMenu(subMenuId) {
-      var subMenu = document.getElementById(subMenuId);
-      if (subMenu.style.display === "block") {
-        subMenu.style.display = "none";
-      } else {
-        subMenu.style.display = "block";
-        // Scroll to the bottom of the submenu
-        subMenu.scrollIntoView(false);
-      }
-    }
-
-
-  </script>
+            
+        </div>
+    </section>
 </body>
 
 </html>
