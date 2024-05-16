@@ -33,9 +33,11 @@
     h5 {
       font-family: "Poppins", sans-serif
     }
+    
     html{
       scroll-behavior: smooth;
     }
+    
     body {
       font-size: 16px;
     }
@@ -66,15 +68,13 @@
 
     /* Add this CSS style to control the transparency level of side menu*/
     #mySidebar {
-      < !-- background-image: url('your-image-url.jpg');
-      -->
       background-size: cover;
       background-position: center;
       background-color: rgba(235, 231, 231, 0.8);
       /* 80% black with 0.8 opacity */
     }
 
-    < !-- cooming soon curson effect -->
+ 
     @keyframes typing {
       from {
         width: 0
@@ -93,8 +93,7 @@
       border-right: .15em solid;
     }
 
-    < !-- cooming soon curson effect -->
-    < !-- style for drop-down cv -->
+   
     .cv-section {
       margin-bottom: 20px;
     }
@@ -111,13 +110,14 @@
       color: #666;
     }
 
-    < !-- end style for drop-down cv -->
-    .listpublication li {
-      <!-- margin-bottom: 50px;  -->
-      margin: 50px;
+    .listpublication li{
+      list-style-type: none;
+      text-size-adjust: 80px;
+      padding: 20px;
     }
-    
    
+  
+    
   </style>
 </head>
 
@@ -147,7 +147,7 @@
       </div>
       <a href="#Members" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Members</a>
       <a href="#publications" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Publications</a>
-      <a href="#event" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Event</a>
+      <a href="#event" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Events</a>
       <a href="#contact" onclick="w3_close()" class="w3-bar-item w3-button w3-hover-white">Contact</a>
     </div>
   </nav>
@@ -215,7 +215,7 @@
       <p>We are setting up the state-of-the-art Ultrahigh Vacuum based Surface and Interface Science research group in
         IIT Bombay. </p>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xlarge w3-text-teal w3-hover-white"></i></a>
       </p>
     </div>
 
@@ -225,7 +225,7 @@
       <h1 class="w3-xxxlarge w3-text-red"><b>Our Interest</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
       <p>Group research interests are focused on (but not limited to) electronic structure studies of:</p>
-      <ul>
+      <ul class="ourinterestlist">
         <li>Quantum materials such as Quantum Spin Hall materials</li>
         <li>Heterostructure of layered materials</li>
         <li>Metallic and Oxide Quasicrystals</li>
@@ -234,7 +234,7 @@
       </ul>
       <p>For more details feel free to <a href="#contact">contact</a> over email or in-person.</p>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xlarge w3-text-teal w3-hover-white"></i></a>
       </p>
     </div>
 
@@ -257,7 +257,7 @@
       <p>Feel free to <a href="#contact">contact</a> for more details such as currently available instrument/facility
         for mentioned projects and/or discuss about your interest.</p>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xlarge w3-text-teal w3-hover-white"></i></a>
       </p>
     </div>
 
@@ -278,7 +278,7 @@
       </ul>
       <p>Feel free to <a href="#contact">contact</a> for more details or visit us in the Laboratory.</p>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xlarge w3-text-teal w3-hover-white"></i></a>
       </p>
     </div>
 
@@ -296,7 +296,7 @@
       </div>
 
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xlarge w3-text-teal w3-hover-white"></i></a>
       </p>
     </div>
 
@@ -312,7 +312,9 @@
 
     <!-- The Team -->
     <div class="w3-row-padding w3-grayscale">
-      <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-row-padding w3-grayscale">
+
+      <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
         <div class="w3-light-grey">
           <img src="/manirajphoto.jpg" alt="maniraj" style="width:100%">
           <div class="w3-container">
@@ -320,42 +322,46 @@
             <p class="w3-opacity">Assistant Professor</p>
             <p>Group leader and active team player.</p>
             <!-- short cv -->
-            <div class="w3-dropdown-hover"> Quick CV
+            <div class="w3-dropdown-hover">   <i style="font-size:24px" class="fa">&#xf0e2;</i>
               <div class="w3-dropdown-content w3-card-4" style="width:250px">
                 <div class="w3-container">
                   <div class="cv-section">
-                    <p>PhD(2007-2014) UGC-DAE CSR, Indore, India</p>
-                    <p>PDF(2014-2019) University of Kaiserslautern, Kaiserslautern, Germany</p>
-                    <p>PDF(2019-2021) Martin Luther University, Halle, Germany</p>
+                    <p>PhD(12/2007-04/2014) UGC-DAE CSR, Indore, India</p>
+                    <p>PDF(05/2014-07/2019) University of Kaiserslautern, Kaiserslautern, Germany</p>
+                    <p>PDF(08/2019-05/2021) Martin Luther University, Halle, Germany</p>
                   </div>
                 </div>
               </div>
             </div> <!-- short cv -->
           </div>
         </div>
-      </div>
-      <div class="w3-col m6 w3-margin-bottom">
+      </div> 
+
+      <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
         <div class="w3-light-grey">
           <img src="/priyamedhaphoto.jpg" alt="priyamedha" style="width:100%">
           <div class="w3-container">
             <h3>Dr. Priyamedha K. R. Sharma</h3>
             <p class="w3-opacity">Post-Doctoral Fellow</p>
-            <p>Received PhD from IIT Mandi. Working from Dec. 2022.</p>
+            <p>Received PhD from IIT Mandi.</p>
+            <p>Working from Dec. 2022.</p>
           </div>
         </div>
       </div>
-      <div class="w3-col m6 w3-margin-bottom">
+
+      <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
         <div class="w3-light-grey">
           <img src="/shanmiphoto.jpg" alt="shanmi" style="width:100%">
           <div class="w3-container">
             <h3>Mr. Shanmi Deibor Syntem <br> </h3>
             <p class="w3-opacity">Ph.D. Fellow</p>
-            <p>M.Sc. from IIT Madras. Working from Sep. 2022.</p>
+            <p>M.Sc. from IIT Madras. </p>
+            <p>Working from Sep. 2022.</p>
           </div>
         </div>
       </div>
 
-      <div class="w3-col m6 w3-margin-bottom">
+      <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
         <div class="w3-light-grey">
           <img src="/saikatphoto.jpg" alt="saikat" style="width:100%">
           <div class="w3-container">
@@ -365,21 +371,22 @@
           </div>
         </div>
       </div>
+    </div>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float:right;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a></p>
+          style="float:right;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xlarge w3-text-teal w3-hover-white"></i></a></p>
     </div>
 
     <!-- Publications -->
     <div class="w3-container" id="publications" style="margin-top:200px">
       <h1 class="w3-xxxlarge w3-text-red"><b>Publications</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
-      <ul class="listpublication" >
+      <ul class="listpublication w3-xlarge">
         <li><a href="https://orcid.org/0000-0001-7305-1368">ORCID</a></li>
         <li><a href="https://scholar.google.com/citations?user=ZwWj7ssAAAAJ">Google Scholar</a></li>
         <li><a href="https://www.researchgate.net/profile/M-Maniraj">ResearchGate</a></li>
       </ul>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xlarge w3-text-teal w3-hover-white"></i></a>
       </p>
     </div>
 
@@ -501,7 +508,7 @@
       </div>
 
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xlarge w3-text-teal w3-hover-white"></i></a>
       </p>
     </div>
 
@@ -542,7 +549,7 @@
 
 
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xlarge w3-text-teal w3-hover-white"></i></a>
       </p>
     </div>
     <!-- Event -->
@@ -572,7 +579,7 @@
 
       </div>
       <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i></a>
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xlarge w3-text-teal w3-hover-white"></i></a>
       </p>
     </div>
 
@@ -582,18 +589,18 @@
       <h1 class="w3-xxxlarge w3-text-red"><b>Contact</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
 
-      <p><i class="fa fa-map-marker fa-fw w3-margin-right w3-large w3-text-teal"></i> Address: Department of Physics,
+      <p class="contact"><i class="fa fa-map-marker fa-fw w3-margin-right w3-large w3-text-teal"></i> Address: Department of Physics,
         Indian Institute of Technology Bombay, Powai, Mumbai- 400076, Maharashtra, India.</p>
-      <p><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i> Email: maniraj@iitb.ac.in</p>
-      <p><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i> Phone: [ext] 6515</p>
-      <p><i class="fa fa-map fa-fw w3-margin-right w3-large w3-text-teal"></i> <a
+      <p class="contact"><i class="fa fa-envelope fa-fw w3-margin-right w3-large w3-text-teal"></i> Email: maniraj@iitb.ac.in</p>
+      <p class="contact"><i class="fa fa-phone fa-fw w3-margin-right w3-large w3-text-teal"></i> Phone: [ext] 6515</p>
+      <p class="contact"><i class="fa fa-map fa-fw w3-margin-right w3-large w3-text-teal"></i> <a
           href="https://maps.app.goo.gl/3iTz91sFUsXnrvSe9" target="_blank">Google Map</a></p>
-      <p><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i> Assistant Professor</p>
-      <p><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i> IIT Bombay</p>
-      <p><i class="fa fa-cogs fa-fw w3-margin-right w3-large w3-text-teal"></i> <a
+      <p class="contact"><i class="fa fa-briefcase fa-fw w3-margin-right w3-large w3-text-teal"></i> Assistant Professor</p>
+      <p class="contact"><i class="fa fa-home fa-fw w3-margin-right w3-large w3-text-teal"></i> IIT Bombay</p>
+      <p class="contact"><i class="fa fa-cogs fa-fw w3-margin-right w3-large w3-text-teal"></i> <a
           href="https://manirajmahalingam.github.io/" target="_blank">My Profile</a></p>
-      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xxlarge w3-text-teal"></i>
+      <p class="contact"><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
+          style="float: right; color: gray;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xlarge w3-text-teal w3-hover-white"></i>
           </a>
       </p>
     </div>
@@ -655,11 +662,18 @@
       delay: 400
     });
 
-    ScrollReveal().reveal('.w3-jumbo', { delay: 300, origin: 'left'});
-    ScrollReveal().reveal('.w3-xxxlarge', { delay: 100, origin: 'left'});
+    ScrollReveal().reveal('.w3-jumbo', { delay: 50, origin: 'left'});
+    ScrollReveal().reveal('.w3-xxxlarge', { delay: 50, origin: 'left'});
+    ScrollReveal().reveal('.w3-xxlarge', { delay: 50, origin: 'left'});
 
-    ScrollReveal().reveal('.w3-round', { delay: 300, origin: 'right'});
-    ScrollReveal().reveal('.listpublication li', { delay: 700, origin: 'bottom', interval: 200});
+
+    ScrollReveal().reveal('.w3-round', { delay: 50, origin: 'right'});
+    ScrollReveal().reveal('.listpublication li', { delay: 100, origin: 'bottom', interval: 20});
+    ScrollReveal().reveal('m6', { delay: 100, origin: 'right', interval: 50}); <!-- for person details -->
+
+    ScrollReveal().reveal('ul, li', { delay: 10, origin: 'right', interval: 20});
+
+    ScrollReveal().reveal('.contact', { delay: 10, origin: 'bottom', interval: 10});
 
 
   </script>
