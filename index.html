@@ -118,6 +118,76 @@
       text-size-adjust: 80px;
       padding: 20px;
     }
+
+    .carousel-container {
+      max-width: 700px;
+      margin: auto;
+      position: relative;
+  }
+  .carousel-main {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      background-color: #f0f0f0;
+      position: relative; /* To position overlay arrows */
+  }
+  .carousel-main img {
+      max-width: 100%;
+      max-height: 400px;
+      object-fit: contain;
+  }
+  .carousel-text {
+      height: 100px;
+      padding: 10px;
+      text-align: center;
+  }
+  .thumbnail-wrapper {
+      overflow-x: auto;
+      white-space: nowrap;
+      margin-top: 10px;
+  }
+  .thumbnails {
+      display: inline-flex;
+      gap: 5px;
+  }
+  .thumbnails img {
+      max-width: 80px;
+      max-height: 60px;
+      cursor: pointer;
+      opacity: 0.6;
+      transition: opacity 0.3s, border 0.3s;
+      object-fit: contain;
+      border: 2px solid transparent;
+  }
+  .thumbnails img:hover {
+      opacity: 1;
+  }
+  .thumbnails img.active {
+      opacity: 1;
+      border: 2px solid #333;
+  }
+  /* Overlay arrow styles */
+  .overlay-arrow {
+      position: absolute;
+      top: 50%;
+      transform: translateY(-50%);
+      font-size: 120px;
+      color: rgba(0, 0, 0, 0.3); /* Semi-transparent color */
+      padding: 10px;
+      cursor: pointer;
+      transition: color 0.3s;
+      user-select: none;
+  }
+  .overlay-arrow:hover {
+      color: rgba(0, 0, 0, 0.5);
+  }
+  .overlay-arrow.left {
+      left: 0;
+  }
+  .overlay-arrow.right {
+      right: 0;
+  }
   </style>
 </head>
 
@@ -322,76 +392,132 @@
       <h1 class="w3-xxxlarge w3-text-red"><b>Members</b></h1>
       <hr style="width:50px;border:5px solid red" class="w3-round">
 
-      <p><b>Our members are thoughtfully chosen</b>:</p>
+      <p><b>Our members are thoughtfully chosen, if you like to join the team write to us.</b>:</p>
     </div>
 
     <!-- The Team -->
-    <div class="w3-row-padding w3-grayscale">
-      <div class="w3-row-padding w3-grayscale">
+<div class="w3-row-padding w3-grayscale">
+  <div class="w3-row-padding w3-grayscale">
 
-        <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
-          <div class="w3-light-grey">
-            <img src="/manirajphoto.jpg" alt="maniraj" style="width:100%">
-            <div class="w3-container">
-              <h3>Prof. Dr. Maniraj Mahalingam</h3>
-              <p class="w3-opacity">Assistant Professor</p>
-              <p>Group leader and active team player.</p>
-              <!-- short cv -->
-              <div class="w3-dropdown-hover"> <i style="font-size:24px" class="fa">&#xf0e2;</i>
-                <div class="w3-dropdown-content w3-card-4" style="width:250px">
-                  <div class="w3-container">
-                    <div class="cv-section">
-                      <p>PhD(12/2007-04/2014) UGC-DAE CSR, Indore, India</p>
-                      <p>PDF(05/2014-07/2019) University of Kaiserslautern, Kaiserslautern, Germany</p>
-                      <p>PDF(08/2019-05/2021) Martin Luther University, Halle, Germany</p>
-                    </div>
-                  </div>
+    <!-- Prof. Dr. Maniraj Mahalingam -->
+    <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
+      <div class="w3-light-grey">
+        <img src="/manirajphoto.jpg" alt="Maniraj" style="width:100%">
+        <div class="w3-container">
+          <h3>Prof. Dr. Maniraj Mahalingam</h3>
+          <p class="w3-opacity">Assistant Professor</p>
+          <p>Group leader and active team player.</p>
+          
+
+          <!-- short cv -->
+          <div class="w3-dropdown-hover"> 
+            <strong>Short CV </strong> <i  class="fa">&#xf03a;</i>
+
+            <!-- <i style="font-size:36px" class="fa">&#xf0e2;</i> -->
+            <div class="w3-dropdown-content w3-card-4" style="width:250px">
+              <div class="w3-container">
+                <div class="cv-section">
+                  <p>PhD(12/2007-04/2014) UGC-DAE CSR, Indore, India</p>
+                  <p>PDF(05/2014-07/2019) AG Aeschlimann, University of Kaiserslautern, Germany</p>
+                  <p>PDF(08/2019-05/2021) AG Widdra, Martin Luther University, Halle, Germany</p>
+                  <p>Asst. Prof.(08/2021-todate) SIS Lab, IIT Bombay, India</p>
                 </div>
-              </div> <!-- short cv -->
+              </div>
             </div>
-          </div>
-        </div>
-
-        <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
-          <div class="w3-light-grey">
-            <img src="/priyamedhaphoto.jpg" alt="priyamedha" style="width:100%">
-            <div class="w3-container">
-              <h3>Dr. Priyamedha K. R. Sharma</h3>
-              <p class="w3-opacity">Post-Doctoral Fellow</p>
-              <p>Received PhD from IIT Mandi.</p>
-              <p>Working from Dec. 2022.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
-          <div class="w3-light-grey">
-            <img src="/shanmiphoto.jpg" alt="shanmi" style="width:100%">
-            <div class="w3-container">
-              <h3>Mr. Shanmi Deibor Syntem <br> </h3>
-              <p class="w3-opacity">Ph.D. Fellow</p>
-              <p>M.Sc. from IIT Madras. </p>
-              <p>Working from Sep. 2022.</p>
-            </div>
-          </div>
-        </div>
-
-        <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
-          <div class="w3-light-grey">
-            <img src="/saikatphoto.jpg" alt="saikat" style="width:100%">
-            <div class="w3-container">
-              <h3>Mr. Saikat Ghoah <br> </h3>
-              <p class="w3-opacity">Summer Intern 2024</p>
-              <p>M.Sc. from IIT Bombay 2024.</p>
-            </div>
-          </div>
+          </div> <!-- short cv -->
         </div>
       </div>
-      <p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
-          style="float:right;"><i
-            class="fa fa-chevron-circle-up w3-margin-right w3-xlarge w3-text-teal w3-hover-white"></i></a></p>
     </div>
 
+    <!-- Dr. Pratheek -->
+    <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
+      <div class="w3-light-grey">
+        <img src="/pratheekphoto.jpg" alt="Pratheek" style="width:100%">
+        <div class="w3-container">
+          <h3>Dr. Pratheek</h3>
+          <p class="w3-opacity">Post-Doctoral Fellow</p>
+          <p>PhD from Rani Channamma University, India.</p>
+          <p>PDF: SIS Lab: 11/2024 - todate</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mr. Shanmi Deibor Syntem -->
+    <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
+      <div class="w3-light-grey">
+        <img src="/shanmiphoto.jpg" alt="Shanmi" style="width:100%">
+        <div class="w3-container">
+          <h3>Mr. Shanmi Deibor Syntem <br> </h3>
+          <p class="w3-opacity">Ph.D. Fellow</p>
+          <p>M.Sc. from IIT Madras.</p>
+          <p>PhD: SIS Lab: 09/2022 - todate.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mr. Adarsh Vilas Jadhao -->
+    <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
+      <div class="w3-light-grey">
+        <img src="/Adarshphoto.jpg" alt="Adarsh" style="width:100%">
+        <div class="w3-container">
+          <h3>Mr. Adarsh Vilas Jadhao <br> </h3>
+          <p class="w3-opacity">B.Tech. Project Fellow - Term 2</p>
+          <p>B.Tech. student of IIT Bombay.</p>
+          <p>BTech Project: SIS Lab: 05/2023 - todate.</p>
+        </div>
+      </div>
+    </div>
+
+    <!-- Mr. Saikat Ghoah -->
+    <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
+      <div class="w3-light-grey">
+        <img src="/saikatphoto.jpg" alt="Saikat" style="width:100%">
+        <div class="w3-container">
+          <h3>Mr. Saikat Ghoah <br> </h3>
+          <p class="w3-opacity">MSc Project Fellow - Term 2</p>
+          <p>M.Sc. student of IIT Bombay.</p>
+          <p>MSc Project: SIS Lab: 05/2024 - todate.</p>
+        </div>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- New section for Alumni -->
+<div class="w3-row-padding w3-grayscale">
+  <p><b>Our Alumni members are...</b>:</p>
+
+  <!-- Dr. Priyamedha K. R. Sharma -->
+  <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
+    <div class="w3-light-grey">
+      <div class="w3-container">
+        <h3>Dr. Priyamedha K. R. Sharma</h3>
+        <p class="w3-opacity">Post-Doctoral Fellow</p>
+        <p>PhD from IIT Mandi</p>
+        <p>PDF: SIS Lab: 12/2022 - 12/2024.</p>
+      </div>
+    </div>
+  </div>
+
+  <!-- Mr. Ramesh Yadav -->
+  <div class="w3-col m6 w3-margin-bottom"> <!-- person-details-start -->
+    <div class="w3-light-grey">
+      <div class="w3-container">
+        <h3>Mr. Ramesh Yadav<br> </h3>
+        <p class="w3-opacity">MSc project Fellow</p>
+        <p>M.Sc. student of IIT Bombay.</p>
+        <p>MSc Project: SIS Lab: 2024.</p>
+      </div>
+    </div>
+  </div>
+</div>
+
+<p><a href="#" onclick="w3_close(); window.scrollTo(0, 0);" class="w3-bar-item w3-button w3-hover-white"
+    style="float:right;"><i class="fa fa-chevron-circle-up w3-margin-right w3-xlarge w3-text-teal w3-hover-white"></i></a></p>
+
+
+   
     <!-- Publications -->
     <div class="w3-container" id="publications" style="margin-top:200px">
       <h1 class="w3-xxxlarge w3-text-red"><b>Publications</b></h1>
@@ -412,8 +538,64 @@
       <h2 class="w3-xxlarge w3-text-red"><b>STM Setup</b></h2>
       <hr style="width:50px;border:5px solid red" class="w3-round">
 
-      <p>Scanning Tunneling Microscopy is used to investigate surface morphology and atomic structure with
+      <p>Scanning Tunneling Microscopy (STM) is used to investigate surface morphology and atomic structure with
         angstrom-range accuracy and picometer-range precision in optimal cases.</p>
+
+        <div class="w3-panel w3-leftbar w3-light-grey">
+          <p><i><strong>"STM is a combination of a spring, piezo, and a sharp tip. Atomic resolution is the result of their synchronized efforts."</strong></i></p>
+        </div>
+
+
+
+        <div class="carousel-container w3-card w3-padding w3-center w3-light-gray">
+          <!-- Thumbnails at the bottom in a scrollable container -->
+          <div class="thumbnail-wrapper">
+              <div class="thumbnails">
+                  <img src="image1.jpg" onclick="showImage(0)">
+                  <img src="image2.jpg" onclick="showImage(1)">
+                  <img src="image3.jpg" onclick="showImage(2)">
+                  <img src="image4.jpg" onclick="showImage(3)">
+                  <img src="image5.jpg" onclick="showImage(4)">
+                  <img src="image6.jpg" onclick="showImage(5)">
+                  <img src="image7.jpg" onclick="showImage(6)">
+                  <img src="image8.jpg" onclick="showImage(7)">
+                  <img src="image9.jpg" onclick="showImage(8)">
+                  <img src="image10.png" onclick="showImage(9)">
+                  <img src="image11.png" onclick="showImage(10)">
+                  <img src="image12.jpg" onclick="showImage(11)">
+                  <img src="image13.jpg" onclick="showImage(12)">
+                  <img src="image14.jpg" onclick="showImage(13)">
+              </div>
+          </div>
+      
+          <!-- Navigation Controls -->
+          <div class="w3-section">
+              <button class="w3-button w3-dark-gray" onclick="prevImage()">&#10094; Prev</button>
+              <button class="w3-button w3-dark-gray" onclick="nextImage()">Next &#10095;</button>
+          </div>
+      
+           <!-- Main Image Display with overlay arrows -->
+            <!-- Main Image Display with an added ID for JavaScript -->
+    <div class="carousel-main" id="carouselMain">
+      <img class="w3-image" id="mainImage" src="image1.jpg" style="width:100%; max-height:100%;">
+      <div class="overlay-arrow left" onclick="prevImage()">&#10094;</div>
+      <div class="overlay-arrow right" onclick="nextImage()">&#10095;</div>
+  </div>
+      
+          <!-- Title and Description -->
+          <div class="carousel-text w3-light-gray" id="imageText">
+              <h3 id="imageTitle">Title 1</h3>
+              <p>Description for Image 1</p>
+          </div>
+          <!-- Duplicate of above Navigation Controls -->
+      <div class="w3-section">
+        <button class="w3-button w3-dark-gray" onclick="prevImage()">&#10094; Prev</button>
+        <button class="w3-button w3-dark-gray" onclick="nextImage()">Next &#10095;</button>
+    </div>
+      </div>
+
+
+
 
 
 
@@ -698,6 +880,79 @@
     ScrollReveal().reveal('ul, li', { delay: 10, origin: 'right', interval: 20 });
 
     ScrollReveal().reveal('.contact', { delay: 10, origin: 'bottom', interval: 10 });
+
+  
+
+
+//thumbnails image part starting  
+    const images = [
+    { src: "image1.jpg", title: "Title 1", description: "Description for Image 1" },
+    { src: "image2.jpg", title: "Title 2", description: "Description for Image 2" },
+    { src: "image3.jpg", title: "Title 3", description: "Description for Image 3" },
+    { src: "image4.jpg", title: "Title 4", description: "Description for Image 4" },
+    { src: "image5.jpg", title: "Title 5", description: "Description for Image 5" },
+    { src: "image6.jpg", title: "Title 6", description: "Description for Image 6" },
+    { src: "image7.jpg", title: "Title 7", description: "Description for Image 6" },
+    { src: "image8.jpg", title: "Title 8", description: "Description for Image 6" },
+    { src: "image9.jpg", title: "Title 9", description: "Description for Image 6" },
+    { src: "image10.png", title: "Title 10", description: "Description for Image 6" },
+    { src: "image11.png", title: "Title 11", description: "Description for Image 6" },
+    { src: "image12.jpg", title: "Title 12", description: "Description for Image 6" },
+    { src: "image13.jpg", title: "Title 13", description: "Description for Image 6" },
+    { src: "image14.jpg", title: "Title 14", description: "Description for Image 6" }
+];
+let currentIndex = 0;
+
+function showImage(index) {
+    currentIndex = (index + images.length) % images.length;
+    const { src, title, description } = images[currentIndex];
+    
+    document.getElementById("mainImage").src = src;
+    document.getElementById("imageTitle").textContent = title;
+    document.getElementById("imageText").querySelector("p").textContent = description;
+    
+    // Clear "active" class from all thumbnails and add to the current
+    document.querySelectorAll(".thumbnails img").forEach((img, i) => {
+        img.classList.toggle("active", i === currentIndex);
+    });
+}
+
+function nextImage() {
+    showImage(currentIndex + 1);
+}
+
+function prevImage() {
+    showImage(currentIndex - 1);
+}
+
+// Initial display
+showImage(currentIndex);
+
+
+
+//autoplay part
+let autoplayInterval; // Variable to store autoplay interval
+
+// Autoplay function to move to the next image every 3 seconds
+function startAutoplay() {
+    autoplayInterval = setInterval(nextImage, 3000); // Change every 3 seconds
+}
+
+// Stops autoplay when user hovers over the carousel
+function stopAutoplay() {
+    clearInterval(autoplayInterval);
+}
+
+// Event listeners for mouse enter and leave to control autoplay
+document.getElementById("carouselMain").addEventListener("mouseenter", stopAutoplay);
+document.getElementById("carouselMain").addEventListener("mouseleave", startAutoplay);
+
+// Initial display and start autoplay
+showImage(currentIndex);
+startAutoplay();
+
+
+//thumbnails image part ending 
 
 
   </script>
