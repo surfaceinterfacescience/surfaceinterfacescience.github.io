@@ -1,0 +1,181 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIS Lab | STM Setup</title>
+  <meta name="description" content="Detailed STM setup page split from the original SIS Lab index.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="stm">
+  <div data-include="components/navbar.html"></div>
+
+  <main>
+    <section class="page-hero shell">
+      <div>
+        <p class="eyebrow">Technique</p>
+        <h1>STM Setup</h1>
+        <p class="lead">
+          Scanning Tunneling Microscopy (STM) is used to investigate surface morphology and atomic
+          structure with angstrom-range accuracy and picometer-range precision in optimal cases.
+        </p>
+      </div>
+      <div class="feature-media">
+        <img src="../2_STM_Box.jpg" alt="Faraday cage for the STM setup">
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell section-block">
+        <div class="quote-card">
+          <strong>"STM is a combination of a spring, piezo, and a sharp tip. Atomic resolution is the result of their synchronized efforts."</strong>
+        </div>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>What this page should contain</h3>
+            <p>
+              For STM, the content works best when it is broken into technical subsections instead of one
+              continuous block. That makes it easier to attach image pairs, captions, and future updates.
+            </p>
+          </article>
+          <article class="card">
+            <h3>Recommended structure</h3>
+            <ul class="bullet-note">
+              <li>Overview and purpose of the setup</li>
+              <li>Tip making and sample approach details</li>
+              <li>Electronics design with board images</li>
+              <li>Data collection and software screenshots</li>
+              <li>Hardware parts and mechanism notes</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell section-block">
+        <div class="card">
+          <h2 class="section-title">Tip Making</h2>
+          <p>
+            Chemically etched tip (metal wire) in close proximity to the graphite sample, chilling in a
+            casual ambient condition.
+          </p>
+        </div>
+        <div class="media-grid">
+          <figure class="card media-card">
+            <img src="../stm_etched_tip.jpg" alt="Home made chemically etched metal tip">
+            <figcaption>Home made chemically etched metal tip.</figcaption>
+          </figure>
+          <figure class="card media-card">
+            <img src="../stm_tip_holder.jpg" alt="Home made tip holder">
+            <figcaption>Home made tip holder for STM experiments.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell section-block">
+        <div class="card">
+          <h2 class="section-title">Electronics Design</h2>
+          <p>
+            Our electronics are home brewed, step by step improved from breadboard to PCB using KiCAD 3D
+            model design.
+          </p>
+          <p>
+            Below are a set of views showcasing electronics boards in action while navigating atom locations.
+            The setup uses the MCP4922 12-bit digital-to-analog converter and the MCP3208 8-channel
+            analog-to-digital converter, along with instrumentation ICs, for lateral scanner electronics.
+          </p>
+        </div>
+        <div class="media-grid">
+          <figure class="card media-card">
+            <img src="../stm_kicad_dac.png" alt="Digital to Analog Converter">
+            <figcaption>KiCAD model for the digital-to-analog converter board.</figcaption>
+          </figure>
+          <figure class="card media-card">
+            <img src="../stm_kicad_4A4B_board.png" alt="Analog to Digital Converter">
+            <figcaption>KiCAD model for the analog-to-digital converter and control board.</figcaption>
+          </figure>
+          <figure class="card media-card">
+            <img src="../stm_preamp.jpg" alt="preamp and PID controller">
+            <figcaption>PID and pre-amp stage used for practical STM control.</figcaption>
+          </figure>
+          <figure class="card media-card">
+            <img src="../stm_DAC_Raspberry_pi.jpg" alt="DAC and Raspberry Pi">
+            <figcaption>Breadboard DAC for the scanner under Raspberry Pi control.</figcaption>
+          </figure>
+        </div>
+        <div class="grid grid-2">
+          <article class="card">
+            <h3>Board evolution</h3>
+            <ul class="bullet-note">
+              <li>Breadboard DAC designed for scanner control</li>
+              <li>Upgraded PCB for the DAC</li>
+              <li>Universal board for pre-amp and PID circuit</li>
+            </ul>
+          </article>
+          <article class="card">
+            <h3>Additional notes</h3>
+            <ul class="bullet-note">
+              <li>Pre-amp target around 10^8 V/A</li>
+              <li>Powered using 2 x 12 V batteries</li>
+              <li>ADC includes custom attenuation and bipolar-to-unipolar conversion</li>
+            </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell section-block">
+        <div class="card">
+          <h2 class="section-title">Data Collection</h2>
+          <p>More than 15 Python modules are in sync and counting up, for counting atoms.</p>
+        </div>
+        <div class="media-grid">
+          <figure class="card media-card">
+            <img src="../stm_liveplot_best.jpg" alt="STM live plot">
+            <figcaption>Live plot view during STM data acquisition.</figcaption>
+          </figure>
+          <figure class="card media-card">
+            <img src="../6_Code_Liveplot_steps.jpg" alt="STM live plotting steps">
+            <figcaption>Python-driven live plotting workflow used in data collection.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell section-block">
+        <div class="card">
+          <h2 class="section-title">Hardware Parts</h2>
+          <p>
+            We are currently employing a stepper motor with a worm gear setup for coarse and fine approach adjustments.
+          </p>
+          <p>
+            Our scanning mechanism currently utilizes a piezoelectric buzzer plate, typically used for speaker
+            purposes. This is a budget-friendly choice that provides room for elaborate testing.
+          </p>
+        </div>
+        <div class="media-grid">
+          <figure class="card media-card">
+            <img src="../stm_piezo_plate.jpg" alt="Piezoelectric buzzer plate">
+            <figcaption>Budget-friendly piezoelectric plate tested as part of the scanning mechanism.</figcaption>
+          </figure>
+          <figure class="card media-card">
+            <img src="../1_STM_Electronics_stack.jpg" alt="STM electronics stack">
+            <figcaption>Broader STM electronics stack connected to the overall setup.</figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+  <script src="js/include.js"></script>
+</body>
+</html>
