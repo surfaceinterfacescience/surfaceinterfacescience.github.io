@@ -35,21 +35,83 @@
         </div>
         <div class="grid grid-2">
           <article class="card">
-            <h3>What this page should contain</h3>
+            <h3>What this page covers</h3>
             <p>
-              For STM, the content works best when it is broken into technical subsections instead of one
-              continuous block. That makes it easier to attach image pairs, captions, and future updates.
+              This page presents the SIS Lab STM as an actively evolving home-built instrument. The setup
+              is being developed from scratch, including the mechanical, electronic, and software components,
+              with continuous testing and optimization at each stage. The content is organized into technical
+              subsections so that both the present status and future upgrades can be documented systematically.
             </p>
           </article>
           <article class="card">
-            <h3>Recommended structure</h3>
+            <h3>Current development structure</h3>
             <ul class="bullet-note">
-              <li>Overview and purpose of the setup</li>
-              <li>Tip making and sample approach details</li>
-              <li>Electronics design with board images</li>
-              <li>Data collection and software screenshots</li>
-              <li>Hardware parts and mechanism notes</li>
+              <li>STM overview and system-level design goals</li>
+              <li>Tip preparation and mechanical approach system</li>
+              <li>Custom electronics design and fabrication</li>
+              <li>Feedback, control, and signal-conditioning modules</li>
+              <li>Data acquisition, instrument interfacing, and software</li>
+              <li>Hardware integration, scanner components, and optimization progress</li>
             </ul>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell section-block">
+        <div class="card">
+          <h2 class="section-title">STM Skeleton Timeline</h2>
+          <p>
+            A practical STM setup can also be understood as a chain of connected subsystems, starting from
+            mechanical approach and tunneling current detection, and extending all the way to computer control
+            and software-driven feedback.
+          </p>
+        </div>
+        <div class="timeline-wrap">
+          <article class="card timeline-item">
+            <h3>Mechanical Approach Tool</h3>
+            <p>Coarse and fine approach mechanism that brings the tip close enough for tunneling to begin safely.</p>
+          </article>
+          <article class="card timeline-item">
+            <h3>Tunneling Junction</h3>
+            <p>Tip-sample gap where the tunneling current carries the key local information about the surface.</p>
+          </article>
+          <article class="card timeline-item">
+            <h3>Transimpedance Amplifier</h3>
+            <p>Tunnel current to voltage conversion stage for turning ultra-small tunneling currents into readable signals.</p>
+          </article>
+          <article class="card timeline-item">
+            <h3>Error Detector</h3>
+            <p>Compares the measured tunneling signal against the setpoint and generates the feedback error.</p>
+          </article>
+          <article class="card timeline-item">
+            <h3>PID Controller</h3>
+            <p>Processes the error signal and stabilizes the tip position during scanning and spectroscopy.</p>
+          </article>
+          <article class="card timeline-item">
+            <h3>High-Voltage Amplifier</h3>
+            <p>Piezo voltage source used to drive scanner motion and tip-sample positioning.</p>
+          </article>
+          <article class="card timeline-item">
+            <h3>Analog-to-Digital Converter</h3>
+            <p>Digitizes the measured analog signals for monitoring, recording, and feedback analysis.</p>
+          </article>
+          <article class="card timeline-item">
+            <h3>Digital-to-Analog Converter</h3>
+            <p>Generates control voltages for scanner motion, feedback setpoints, and related electronics.</p>
+          </article>
+          <article class="card timeline-item">
+            <h3>Lock-in Amplifier</h3>
+            <p>Useful for modulation-based measurements, signal extraction, and spectroscopy-oriented workflows.</p>
+          </article>
+          <article class="card timeline-item">
+            <h3>Personal Computer</h3>
+            <p>Main control platform for data flow, scan execution, acquisition logic, and instrument interfacing.</p>
+          </article>
+          <article class="card timeline-item">
+            <h3>Software</h3>
+            <p>Coordinates feedback, visualization, scanning routines, automation, and long-term experiment control.</p>
           </article>
         </div>
       </div>
