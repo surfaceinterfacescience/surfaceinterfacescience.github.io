@@ -431,6 +431,15 @@ main {
   object-fit: cover;
 }
 
+.feature-media--contain {
+  min-height: 0;
+  padding: 0.4rem;
+}
+
+.feature-media--contain img {
+  object-fit: contain;
+}
+
 .section-block {
   display: grid;
   gap: 1rem;

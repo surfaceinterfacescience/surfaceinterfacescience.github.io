@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>SIS Lab | Kelvin Probe</title>
+  <meta name="description" content="A compact, low-cost Kelvin probe with microcontroller-based digital lock-in detection for contact potential difference measurements.">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Source+Sans+3:wght@400;600;700&family=Space+Grotesk:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body data-page="kelvin-probe">
+  <div data-include="components/navbar.html"></div>
+
+  <main>
+    <section class="page-hero shell">
+      <div>
+        <p class="eyebrow">Technique</p>
+        <h1>Compact, Low-Cost Kelvin Probe</h1>
+        <p class="lead">
+          A capacitive Kelvin-probe system for measuring contact potential difference (CPD) and tracking
+          changes in surface work function, built around accessible components and programmable electronics.
+        </p>
+      </div>
+      <figure class="feature-media feature-media--contain">
+        <img src="images/kelvin-probe/digital-lockin-schematic.jpg" alt="Schematic of the vibrating Kelvin probe, self-resonant driver, transimpedance amplifier, and digital lock-in amplifier">
+      </figure>
+    </section>
+
+    <section class="section">
+      <div class="shell section-block">
+        <div class="quote-card">
+          <strong>Macroscopic work-function measurements made practical for teaching, student projects, and low-cost surface-science instrumentation.</strong>
+        </div>
+        <div class="grid grid-2">
+          <article class="card">
+            <h2 class="section-title">How it works</h2>
+            <p>
+              A small gold probe is periodically vibrated above a stationary sample, changing the capacitance
+              across the probe-sample gap. When their work functions differ, this capacitance modulation
+              produces a small AC current.
+            </p>
+            <p>
+              A compensation voltage is swept to null the current. The nullification point gives the CPD,
+              and therefore the work-function difference between the two materials.
+            </p>
+          </article>
+          <article class="card">
+            <h2 class="section-title">Digital lock-in detection</h2>
+            <p>
+              A piezoelectric buzzer plate supplies the mechanical vibration. Its reference waveform and the
+              Kelvin-probe signal are processed on a Teensy 4.1 microcontroller using in-phase and quadrature
+              detection, digital mixing, and low-pass filtering.
+            </p>
+            <p>
+              The resulting amplitude and phase reveal the phase reversal that identifies the CPD during a
+              compensation-voltage sweep.
+            </p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell section-block">
+        <div>
+          <h2 class="section-title">Instrument highlights</h2>
+          <p class="section-intro">The platform combines a simple capacitive probe with flexible, real-time digital signal processing.</p>
+        </div>
+        <div class="grid grid-3">
+          <article class="card"><h3>Accessible architecture</h3><p>Commercial piezoelectric buzzer actuator, capacitive probe, transimpedance amplifier, and XYZ positioning for alignment.</p></article>
+          <article class="card"><h3>Standalone operation</h3><p>A self-resonant driver sustains motion near the buzzer’s mechanical resonance without an external function generator.</p></article>
+          <article class="card"><h3>Adaptive processing</h3><p>Reference-signal frequency estimation, programmable filtering, and phase-sensitive detection are implemented in firmware.</p></article>
+        </div>
+        <div class="grid grid-2">
+          <article class="highlight-panel">
+            <h3>Measurement resolution</h3>
+            <p>Demonstrated CPD resolution is approximately 10 mV with external function-generator excitation and approximately 100 mV with the present self-resonant driver.</p>
+          </article>
+          <article class="highlight-panel">
+            <h3>Learning platform</h3>
+            <p>The instrument connects electronics, digital signal processing, physics, instrumentation, programming, and surface science in one hands-on experiment.</p>
+          </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell grid grid-2">
+        <article class="card">
+          <h2 class="section-title">What it can study</h2>
+          <p>
+            The capacitive Kelvin probe is suited to macroscopic CPD and work-function measurements, including
+            comparisons between materials and changes caused by surface modification, adsorption, or oxidation.
+          </p>
+          <p>
+            Because its processing pipeline is programmable, it is also a useful starting point for developing
+            custom frequency tracking, filtering, and automated measurement strategies.
+          </p>
+        </article>
+        <article class="card">
+          <h2 class="section-title">Complementary to KPFM</h2>
+          <p>
+            Kelvin probe force microscopy (KPFM) integrates Kelvin-probe measurements with atomic-force
+            microscopy to map surface potential at the nanoscale. This instrument instead prioritizes a simple,
+            accessible route to CPD measurement and experimental learning.
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section">
+      <div class="shell card">
+        <p class="eyebrow">Journal article</p>
+        <h2 class="section-title">Microcontroller-based digital lock-in Kelvin probe system using a self-resonant piezoelectric buzzer plate</h2>
+        <p>Shanmi D. Syntem, Pratheek, Priyamedha Sharma, and M. Maniraj. <em>Review of Scientific Instruments</em>, accepted August 2026.</p>
+      </div>
+    </section>
+  </main>
+
+  <div data-include="components/footer.html"></div>
+  <script src="js/include.js"></script>
+</body>
+</html>

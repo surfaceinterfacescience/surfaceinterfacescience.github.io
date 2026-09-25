@@ -48,7 +48,7 @@ function setupNavigation() {
       }
     });
 
-    if (["techniques", "stm", "photoemission"].includes(currentPage) && dropdownToggle) {
+    if (["techniques", "stm", "kelvin-probe", "photoemission"].includes(currentPage) && dropdownToggle) {
       dropdownToggle.classList.add("is-active");
     }
   }
